@@ -1,0 +1,69 @@
+import type { Metadata } from "next";
+import { Amiri, Nunito_Sans } from "next/font/google";
+import "./globals.css";
+
+const amiri = Amiri({
+  subsets: ["latin", "arabic"],
+  weight: ["400", "700"],
+  variable: "--font-amiri",
+  display: "swap",
+});
+
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700", "800"],
+  variable: "--font-nunito",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.dghacademy.com"),
+  title: {
+    default: "Dr. Gambo Hamza Islamic Academy | DGH Academy Jos",
+    template: "%s | DGH Academy",
+  },
+  description:
+    "Dr. Gambo Hamza Islamic Academy — A distinguished private nursery and primary school in Gangare, Jos offering Nigerian & British curriculum alongside strong Islamic values. Enquire or apply today.",
+  keywords: [
+    "DGH Academy",
+    "Dr Gambo Hamza Islamic Academy",
+    "Islamic school Jos",
+    "private school Gangare",
+    "nursery school Jos",
+    "primary school Jos Nigeria",
+    "Islamic education Plateau State",
+    "Madrasa Jos",
+    "dghacademy.com",
+  ],
+  authors: [{ name: "DGH Academy" }],
+  creator: "Dr. Gambo Hamza Islamic Academy",
+  openGraph: {
+    type: "website",
+    locale: "en_NG",
+    url: "https://www.dghacademy.com",
+    siteName: "DGH Academy",
+    title: "Dr. Gambo Hamza Islamic Academy | DGH Academy Jos",
+    description:
+      "A distinguished Academy where pupils excel academically, morally and spiritually — Gangare, Jos, Nigeria.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DGH Academy" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dr. Gambo Hamza Islamic Academy",
+    description: "A distinguished Academy — Gangare, Jos, Nigeria.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${amiri.variable} ${nunitoSans.variable}`}>
+      <body className="font-nunito antialiased">{children}</body>
+    </html>
+  );
+}

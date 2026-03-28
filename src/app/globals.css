@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   DESIGN TOKENS — DGH Academy
+   School theme: Brown / Cream / White
+   Madrasa theme: Deep Teal / Gold / Ivory
+   ============================================================ */
+
+:root {
+  /* School Palette */
+  --school-primary: #6B3A2A;
+  --school-primary-light: #8B4E38;
+  --school-primary-dark: #4A2419;
+  --school-accent: #C4955A;
+  --school-cream: #F5ECD7;
+  --school-cream-dark: #EDD9B5;
+  --school-white: #FEFCF8;
+  --school-text: #2A1810;
+  --school-text-muted: #7A5A4A;
+
+  /* Madrasa Palette */
+  --madrasa-primary: #1A4A4A;
+  --madrasa-primary-light: #235E5E;
+  --madrasa-primary-dark: #0F2D2D;
+  --madrasa-accent: #C9A84C;
+  --madrasa-accent-light: #E0C070;
+  --madrasa-ivory: #F8F4EC;
+  --madrasa-text: #0F2D2D;
+  --madrasa-text-muted: #4A7A7A;
+
+  /* Shared */
+  --radius: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --transition: 0.3s ease;
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-nunito), sans-serif;
+  line-height: 1.7;
+  color: var(--school-text);
+  background: var(--school-white);
+}
+
+.font-amiri { font-family: var(--font-amiri), serif; }
+
+/* ============================================================
+   SCHOOL THEME UTILITIES
+   ============================================================ */
+
+.school-gradient {
+  background: linear-gradient(135deg, var(--school-primary-dark) 0%, var(--school-primary) 60%, var(--school-primary-light) 100%);
+}
+
+.school-cream-bg { background-color: var(--school-cream); }
+.school-accent-text { color: var(--school-accent); }
+.school-primary-text { color: var(--school-primary); }
+
+/* ============================================================
+   MADRASA THEME UTILITIES
+   ============================================================ */
+
+.madrasa-gradient {
+  background: linear-gradient(135deg, var(--madrasa-primary-dark) 0%, var(--madrasa-primary) 60%, var(--madrasa-primary-light) 100%);
+}
+
+.madrasa-ivory-bg { background-color: var(--madrasa-ivory); }
+.madrasa-accent-text { color: var(--madrasa-accent); }
+.madrasa-primary-text { color: var(--madrasa-primary); }
+
+/* ============================================================
+   GEOMETRIC PATTERN BACKGROUNDS
+   ============================================================ */
+
+.pattern-islamic {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C4955A' fill-opacity='0.08'%3E%3Cpath d='M30 0L37.5 15H52.5L41.25 24.375L45.75 39.375L30 30L14.25 39.375L18.75 24.375L7.5 15H22.5L30 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pattern-geometric {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9A84C' fill-opacity='0.06'%3E%3Cpath d='M20 0L40 20L20 40L0 20L20 0zM20 8L32 20L20 32L8 20L20 8z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   COMPONENT CLASSES
+   ============================================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: all var(--transition);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-school {
+  background: var(--school-primary);
+  color: white;
+}
+.btn-school:hover {
+  background: var(--school-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(107, 58, 42, 0.35);
+}
+
+.btn-school-outline {
+  background: transparent;
+  color: var(--school-primary);
+  border: 2px solid var(--school-primary);
+}
+.btn-school-outline:hover {
+  background: var(--school-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-madrasa {
+  background: var(--madrasa-accent);
+  color: var(--madrasa-primary-dark);
+}
+.btn-madrasa:hover {
+  background: var(--madrasa-accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(201, 168, 76, 0.4);
+}
+
+.btn-madrasa-outline {
+  background: transparent;
+  color: var(--madrasa-ivory);
+  border: 2px solid var(--madrasa-accent);
+}
+.btn-madrasa-outline:hover {
+  background: var(--madrasa-accent);
+  color: var(--madrasa-primary-dark);
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  transition: all var(--transition);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--school-cream); }
+::-webkit-scrollbar-thumb { background: var(--school-primary); border-radius: 3px; }
+
+/* ============================================================
+   RESPONSIVE UTILITIES
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container { padding: 0 2rem; }
+}

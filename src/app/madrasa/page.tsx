@@ -4,9 +4,17 @@ import {
   CheckCircle2, Phone, Mail, MapPin, Users
 } from "lucide-react";
 import {
-  madrasaInfo, madrasaHero, madrasaStats, madrasaMallam,
-  madrasaPrograms, madrasaTimetable, madrasaValues,
-  madrasaFacilities, madrasaAdmissionRequirements, madrasaClasses,
+  madrasaInfo,
+  madrasaHero,
+  madrasaStats,
+  madrasaMallam,
+  madrasaPrograms,
+  madrasaTimetable,
+  madrasaValues,
+  madrasaFacilities,
+  madrasaAdmissionRequirements,
+  madrasaClasses,
+  madrasaAbout, 
 } from "@/data/madrasa";
 
 export default function MadrasaHomePage() {

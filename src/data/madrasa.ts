@@ -22,7 +22,7 @@ export const madrasaNav: NavLink[] = [
 export const madrasaInfo = {
   fullName: "DGH Academy Madrasa",
   shortName: "DGH Madrasa",
-  arabicName: "مدرسة أكاديمية د.غ.هـ",
+  arabicName: "مدرسة أكاديمية د.غ.عـ",
   tagline: "Nurturing Hearts Through the Light of the Quran",
   established: 2025,
   hours: "4:00pm – 7:00pm",

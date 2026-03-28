@@ -8,7 +8,7 @@ export default function SchoolFooter() {
       {/* Main footer */}
       <div className="container py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand */}
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 footer-card">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 rounded-full bg-[var(--school-accent)] flex items-center justify-center font-amiri font-bold text-[var(--school-primary-dark)] text-xl">
               DGH
@@ -17,14 +17,17 @@ export default function SchoolFooter() {
               <div className="font-amiri font-bold text-lg text-[var(--school-cream)]">
                 {schoolInfo.fullName}
               </div>
-              <div className="text-xs text-[var(--school-accent)]">Est. {schoolInfo.established}</div>
+              <div className="text-xs text-[var(--school-accent)]">
+                Est. {schoolInfo.established}
+              </div>
             </div>
           </div>
           <p className="font-amiri italic text-[var(--school-accent)] text-lg mb-3">
             "{schoolInfo.motto}"
           </p>
           <p className="text-sm text-[var(--school-cream)]/70 leading-relaxed max-w-xs">
-            A distinguished Academy where pupils excel academically, morally and spiritually, rooted in the teachings of Islam.
+            A distinguished Academy where pupils excel academically, morally and
+            spiritually, rooted in the teachings of Islam.
           </p>
           {schoolInfo.facebook && (
             <a
@@ -39,21 +42,23 @@ export default function SchoolFooter() {
         </div>
 
         {/* Quick links */}
-        <div>
+        <div className="footer-card">
           <h4 className="font-bold text-[var(--school-accent)] uppercase text-xs tracking-widest mb-4">
             Quick Links
           </h4>
           <ul className="space-y-2">
-            {schoolNav.filter(l => l.label !== "Madrasa →").map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {schoolNav
+              .filter((l) => l.label !== "Madrasa →")
+              .map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             <li>
               <Link
                 href="/madrasa"
@@ -66,27 +71,42 @@ export default function SchoolFooter() {
         </div>
 
         {/* Contact */}
-        <div>
+        <div className="footer-card">
           <h4 className="font-bold text-[var(--school-accent)] uppercase text-xs tracking-widest mb-4">
             Contact Us
           </h4>
           <ul className="space-y-3">
             <li className="flex items-start gap-2.5 text-sm text-[var(--school-cream)]/70">
-              <MapPin size={14} className="mt-1 shrink-0 text-[var(--school-accent)]" />
+              <MapPin
+                size={14}
+                className="mt-1 shrink-0 text-[var(--school-accent)]"
+              />
               {schoolInfo.address}
             </li>
             <li>
-              <a href={`tel:${schoolInfo.phone}`} className="flex items-center gap-2.5 text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors">
-                <Phone size={14} className="text-[var(--school-accent)]" /> {schoolInfo.phone}
+              <a
+                href={`tel:${schoolInfo.phone}`}
+                className="flex items-center gap-2.5 text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors"
+              >
+                <Phone size={14} className="text-[var(--school-accent)]" />{" "}
+                {schoolInfo.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${schoolInfo.email}`} className="flex items-center gap-2.5 text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors break-all">
-                <Mail size={14} className="text-[var(--school-accent)] shrink-0" /> {schoolInfo.email}
+              <a
+                href={`mailto:${schoolInfo.email}`}
+                className="flex items-center gap-2.5 text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors break-all"
+              >
+                <Mail
+                  size={14}
+                  className="text-[var(--school-accent)] shrink-0"
+                />{" "}
+                {schoolInfo.email}
               </a>
             </li>
             <li className="flex items-center gap-2.5 text-sm text-[var(--school-cream)]/70">
-              <Clock size={14} className="text-[var(--school-accent)]" /> {schoolInfo.workingHours}
+              <Clock size={14} className="text-[var(--school-accent)]" />{" "}
+              {schoolInfo.workingHours}
             </li>
           </ul>
 
@@ -104,8 +124,17 @@ export default function SchoolFooter() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-[var(--school-cream)]/40">
-          <span>© {new Date().getFullYear()} Dr. Gambo Hamza Islamic Academy. All rights reserved.</span>
+          <span>
+            © {new Date().getFullYear()} Dr. Gambo Hamza Islamic Academy. All
+            rights reserved.
+          </span>
           <span>www.dghacademy.com · www.dghacademy.edu.ng</span>
+          <a
+            href="#top"
+            className="back-to-top text-[var(--school-cream)]/90 hover:text-[var(--school-accent)]"
+          >
+            ↑ Back to top
+          </a>
         </div>
       </div>
     </footer>

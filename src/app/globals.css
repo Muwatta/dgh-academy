@@ -10,73 +10,134 @@
 
 :root {
   /* School Palette */
-  --school-primary: #6B3A2A;
-  --school-primary-light: #8B4E38;
-  --school-primary-dark: #4A2419;
-  --school-accent: #C4955A;
-  --school-cream: #F5ECD7;
-  --school-cream-dark: #EDD9B5;
-  --school-white: #FEFCF8;
-  --school-text: #2A1810;
-  --school-text-muted: #7A5A4A;
+  --school-primary: #6b3a2a;
+  --school-primary-light: #8b4e38;
+  --school-primary-dark: #4a2419;
+  --school-accent: #c4955a;
+  --school-cream: #f5ecd7;
+  --school-cream-dark: #edd9b5;
+  --school-white: #fefcf8;
+  --school-text: #2a1810;
+  --school-text-muted: #7a5a4a;
 
   /* Madrasa Palette */
-  --madrasa-primary: #1A4A4A;
-  --madrasa-primary-light: #235E5E;
-  --madrasa-primary-dark: #0F2D2D;
-  --madrasa-accent: #C9A84C;
-  --madrasa-accent-light: #E0C070;
-  --madrasa-ivory: #F8F4EC;
-  --madrasa-text: #0F2D2D;
-  --madrasa-text-muted: #4A7A7A;
+  --madrasa-primary: #1a4a4a;
+  --madrasa-primary-light: #235e5e;
+  --madrasa-primary-dark: #0f2d2d;
+  --madrasa-accent: #c9a84c;
+  --madrasa-accent-light: #e0c070;
+  --madrasa-ivory: #f8f4ec;
+  --madrasa-text: #0f2d2d;
+  --madrasa-text-muted: #4a7a7a;
 
   /* Shared */
   --radius: 0.5rem;
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
   --transition: 0.3s ease;
+
+  /* UI theme tokens */
+  --page-bg: var(--school-white);
+  --page-text: var(--school-text);
+  --page-muted-text: var(--school-text-muted);
+  --page-card-bg: #ffffff;
+  --page-border: rgba(0, 0, 0, 0.08);
+}
+
+.theme-light {
+  --page-bg: var(--school-white);
+  --page-text: var(--school-text);
+  --page-muted-text: var(--school-text-muted);
+  --page-card-bg: #ffffff;
+  --page-border: rgba(0, 0, 0, 0.08);
+}
+
+.theme-dark {
+  --page-bg: #0b1220;
+  --page-text: #e2e8f0;
+  --page-muted-text: #c3d2ea;
+  --page-card-bg: #15203a;
+  --page-border: rgba(255, 255, 255, 0.12);
+  --school-text: #e2e8f0;
+  --school-text-muted: #c3d2ea;
+  --school-white: #f8fafc;
+  --school-cream: #1b2f4f;
+  --school-cream-dark: #182a45;
 }
 
 /* ============================================================
    BASE STYLES
    ============================================================ */
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-nunito), sans-serif;
   line-height: 1.7;
-  color: var(--school-text);
-  background: var(--school-white);
+  color: var(--page-text);
+  background: var(--page-bg);
+  transition:
+    background var(--transition),
+    color var(--transition);
 }
 
-.font-amiri { font-family: var(--font-amiri), serif; }
+.font-amiri {
+  font-family: var(--font-amiri), serif;
+}
 
 /* ============================================================
    SCHOOL THEME UTILITIES
    ============================================================ */
 
 .school-gradient {
-  background: linear-gradient(135deg, var(--school-primary-dark) 0%, var(--school-primary) 60%, var(--school-primary-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--school-primary-dark) 0%,
+    var(--school-primary) 60%,
+    var(--school-primary-light) 100%
+  );
 }
 
-.school-cream-bg { background-color: var(--school-cream); }
-.school-accent-text { color: var(--school-accent); }
-.school-primary-text { color: var(--school-primary); }
+.school-cream-bg {
+  background-color: var(--school-cream);
+}
+.school-accent-text {
+  color: var(--school-accent);
+}
+.school-primary-text {
+  color: var(--school-primary);
+}
 
 /* ============================================================
    MADRASA THEME UTILITIES
    ============================================================ */
 
 .madrasa-gradient {
-  background: linear-gradient(135deg, var(--madrasa-primary-dark) 0%, var(--madrasa-primary) 60%, var(--madrasa-primary-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--madrasa-primary-dark) 0%,
+    var(--madrasa-primary) 60%,
+    var(--madrasa-primary-light) 100%
+  );
 }
 
-.madrasa-ivory-bg { background-color: var(--madrasa-ivory); }
-.madrasa-accent-text { color: var(--madrasa-accent); }
-.madrasa-primary-text { color: var(--madrasa-primary); }
+.madrasa-ivory-bg {
+  background-color: var(--madrasa-ivory);
+}
+.madrasa-accent-text {
+  color: var(--madrasa-accent);
+}
+.madrasa-primary-text {
+  color: var(--madrasa-primary);
+}
 
 /* ============================================================
    GEOMETRIC PATTERN BACKGROUNDS
@@ -151,15 +212,16 @@ body {
 }
 
 .card {
-  background: white;
+  background: var(--page-card-bg);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--page-border);
   transition: all var(--transition);
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
 }
 
 .section-tag {
@@ -173,23 +235,154 @@ body {
   margin-bottom: 1rem;
 }
 
+.facility-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--school-cream);
+  border: 1px solid var(--school-cream-dark);
+  color: var(--school-text);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background var(--transition),
+    color var(--transition);
+}
+
+.facility-card:hover,
+.facility-card:focus-within {
+  background: var(--school-primary);
+  color: var(--madrasa-ivory);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.facility-card:hover .facility-icon,
+.facility-card:focus-within .facility-icon {
+  color: var(--school-accent);
+}
+
+.facility-icon {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--school-primary);
+  color: var(--school-primary);
+  transition:
+    color var(--transition),
+    border-color var(--transition);
+}
+
+.navbar-glass {
+  backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+.navbar-glass.theme-dark {
+  background-color: rgba(15, 25, 45, 0.85);
+}
+
+.navbar-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.6rem;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0.3rem;
+  left: 10%;
+  width: 0;
+  height: 2px;
+  background: var(--school-primary);
+  transition: width var(--transition);
+  border-radius: 999px;
+}
+
+.navbar-link:hover::after,
+.navbar-link:focus-visible::after {
+  width: 80%;
+}
+
+.navbar-cta {
+  background: var(--school-accent);
+  color: var(--school-primary-dark);
+}
+
+.navbar-cta:hover {
+  background: var(--school-accent-light);
+}
+
+.footer-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.theme-dark .footer-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--school-accent);
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: all var(--transition);
+}
+
+.back-to-top:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
 /* ============================================================
    ANIMATIONS
    ============================================================ */
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .animate-fade-up {
@@ -200,19 +393,36 @@ body {
   animation: fadeIn 0.5s ease forwards;
 }
 
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
 
 /* ============================================================
    SCROLLBAR
    ============================================================ */
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--school-cream); }
-::-webkit-scrollbar-thumb { background: var(--school-primary); border-radius: 3px; }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--school-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--school-primary);
+  border-radius: 3px;
+}
 
 /* ============================================================
    RESPONSIVE UTILITIES
@@ -226,5 +436,113 @@ body {
 }
 
 @media (min-width: 768px) {
-  .container { padding: 0 2rem; }
+  .container {
+    padding: 0 2rem;
+  }
 }
+
+/* ============================================================
+   UI ENHANCEMENTS: spacing, typography, accessibility
+   ============================================================ */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  display: block;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+p,
+li,
+span,
+a {
+  transition:
+    color var(--transition),
+    opacity var(--transition);
+}
+
+a {
+  text-decoration: none;
+}
+
+.card,
+.btn-primary {
+  will-change: transform;
+}
+
+input,
+select,
+textarea,
+.btn-primary {
+  transition:
+    box-shadow var(--transition),
+    transform var(--transition),
+    border-color var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(106, 69, 36, 0.25);
+  border-color: var(--school-primary);
+}
+
+input,
+select,
+textarea {
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary {
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  min-height: 3rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.section-tag {
+  padding: 0.35rem 1.25rem;
+  letter-spacing: 0.16em;
+}
+
+.container > * + * {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* For dark mode, root vars are already set in .theme-dark, no need invalid [..] class selectors. */

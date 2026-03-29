@@ -1,141 +1,148 @@
+"use client";
+
 import Link from "next/link";
-import { Phone, Mail, MapPin, Facebook, Clock } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { useMemo, useState } from "react";
 import { schoolInfo, schoolNav } from "@/data/school";
 
 export default function SchoolFooter() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+
+  const emailValid = useMemo(() => /^\S+@\S+\.\S+$/.test(email), [email]);
+
+  const handleSubscribe = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!emailValid) {
+      setStatus("error");
+      return;
+    }
+    setStatus("submitting");
+    setTimeout(() => setStatus("success"), 700);
+  };
+
   return (
-    <footer className="bg-[var(--school-primary-dark)] text-[var(--school-cream)]">
-      {/* Main footer */}
-      <div className="container py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        {/* Brand */}
-        <div className="lg:col-span-2 footer-card">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-full bg-[var(--school-accent)] flex items-center justify-center font-amiri font-bold text-[var(--school-primary-dark)] text-xl">
-              DGH
-            </div>
-            <div>
-              <div className="font-amiri font-bold text-lg text-[var(--school-cream)]">
-                {schoolInfo.fullName}
-              </div>
-              <div className="text-xs text-[var(--school-accent)]">
-                Est. {schoolInfo.established}
-              </div>
-            </div>
+    <footer className="bg-gradient-to-r from-[#F5ECD7] via-[#ffffff] to-[#f8f1e5] text-[var(--school-primary-dark)]">
+      <div className="container py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="lg:col-span-2">
+          <div className="text-2xl font-bold text-[var(--school-primary-dark)] mb-2">
+            {schoolInfo.fullName}
           </div>
-          <p className="font-amiri italic text-[var(--school-accent)] text-lg mb-3">
-            "{schoolInfo.motto}"
+          <div className="flex flex-wrap gap-3 text-xs text-[var(--school-primary-dark)]/70 mb-3">
+            <span>Est. {schoolInfo.established}</span>
+            <span className="py-1 px-2 bg-[var(--school-accent)]/20 rounded-full">
+              {schoolInfo.type}
+            </span>
+            <span className="py-1 px-2 bg-[var(--school-accent)]/20 rounded-full">
+              {schoolInfo.ownership}
+            </span>
+          </div>
+          <p className="text-sm text-[var(--school-primary-dark)]/80 max-w-xl leading-relaxed">
+            A distinguished academy where pupils excel academically, morally,
+            and spiritually, guided by ethical values and strong community
+            engagement.
           </p>
-          <p className="text-sm text-[var(--school-cream)]/70 leading-relaxed max-w-xs">
-            A distinguished Academy where pupils excel academically, morally and
-            spiritually, rooted in the teachings of Islam.
-          </p>
-          {schoolInfo.facebook && (
+          <div className="mt-4 flex gap-3">
+            {schoolInfo.facebook && (
+              <a
+                href={schoolInfo.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--school-primary-dark)] hover:text-[var(--school-accent)] transition-colors"
+              >
+                <Facebook size={22} />
+              </a>
+            )}
             <a
-              href={schoolInfo.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-4 text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors"
+              href="#"
+              className="text-[var(--school-primary-dark)] hover:text-[var(--school-accent)] transition-colors"
             >
-              <Facebook size={16} /> Follow us on Facebook
+              <Instagram size={22} />
             </a>
-          )}
+            <a
+              href="#"
+              className="text-[var(--school-primary-dark)] hover:text-[var(--school-accent)] transition-colors"
+            >
+              <Twitter size={22} />
+            </a>
+            <a
+              href="#"
+              className="text-[var(--school-primary-dark)] hover:text-[var(--school-accent)] transition-colors"
+            >
+              <Youtube size={22} />
+            </a>
+          </div>
         </div>
 
-        {/* Quick links */}
-        <div className="footer-card">
-          <h4 className="font-bold text-[var(--school-accent)] uppercase text-xs tracking-widest mb-4">
+        <div>
+          <h4 className="font-semibold text-[var(--school-primary-dark)] mb-3">
             Quick Links
           </h4>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-sm text-[var(--school-primary-dark)]/80">
             {schoolNav
-              .filter((l) => l.label !== "Madrasa →")
+              .filter((link) => link.label !== "Madrasa →")
               .map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors"
+                    className="hover:text-[var(--school-accent)] transition-colors"
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
-            <li>
-              <Link
-                href="/madrasa"
-                className="text-sm text-[var(--school-accent)] hover:text-[var(--school-accent-light)] transition-colors font-semibold"
-              >
-                Evening Madrasa →
-              </Link>
-            </li>
           </ul>
         </div>
 
-        {/* Contact */}
-        <div className="footer-card">
-          <h4 className="font-bold text-[var(--school-accent)] uppercase text-xs tracking-widest mb-4">
-            Contact Us
+        <div>
+          <h4 className="font-semibold text-[var(--school-primary-dark)] mb-3">
+            Visit Us
           </h4>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2.5 text-sm text-[var(--school-cream)]/70">
-              <MapPin
-                size={14}
-                className="mt-1 shrink-0 text-[var(--school-accent)]"
-              />
-              {schoolInfo.address}
-            </li>
-            <li>
-              <a
-                href={`tel:${schoolInfo.phone}`}
-                className="flex items-center gap-2.5 text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors"
-              >
-                <Phone size={14} className="text-[var(--school-accent)]" />{" "}
-                {schoolInfo.phone}
-              </a>
-            </li>
-            <li>
-              <a
-                href={`mailto:${schoolInfo.email}`}
-                className="flex items-center gap-2.5 text-sm text-[var(--school-cream)]/70 hover:text-[var(--school-accent)] transition-colors break-all"
-              >
-                <Mail
-                  size={14}
-                  className="text-[var(--school-accent)] shrink-0"
-                />{" "}
-                {schoolInfo.email}
-              </a>
-            </li>
-            <li className="flex items-center gap-2.5 text-sm text-[var(--school-cream)]/70">
-              <Clock size={14} className="text-[var(--school-accent)]" />{" "}
-              {schoolInfo.workingHours}
-            </li>
+          <ul className="space-y-2 text-sm text-[var(--school-primary-dark)]/80">
+            <li>{schoolInfo.address}</li>
+            {schoolInfo.phone ? <li>📞 {schoolInfo.phone}</li> : null}
+            {schoolInfo.email ? <li>✉️ {schoolInfo.email}</li> : null}
+            <li>🕒 {schoolInfo.workingHours}</li>
           </ul>
+        </div>
 
-          <a
-            href={schoolInfo.googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 text-xs font-semibold px-4 py-2 border border-[var(--school-accent)]/40 rounded text-[var(--school-accent)] hover:bg-[var(--school-accent)] hover:text-[var(--school-primary-dark)] transition-all"
-          >
-            View on Google Maps
-          </a>
+        <div>
+          <h4 className="font-semibold text-[var(--school-primary-dark)] mb-3">
+            Newsletter
+          </h4>
+          <p className="text-sm text-[var(--school-primary-dark)]/80 mb-3">
+            Get school updates and events straight to your inbox.
+          </p>
+          <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="your.email@example.com"
+              className="w-full rounded-xl border border-[var(--school-accent)]/40 bg-white px-3 py-2 text-sm text-[var(--school-primary-dark)] outline-none focus:border-[var(--school-primary)]"
+            />
+            <button
+              disabled={status === "submitting"}
+              type="submit"
+              className="rounded-xl bg-[var(--school-primary)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--school-accent)] transition disabled:bg-[var(--school-accent)]/40"
+            >
+              {status === "submitting" ? "Submitting..." : "Subscribe"}
+            </button>
+            {status === "success" && (
+              <p className="text-xs text-green-600">Subscribed successfully!</p>
+            )}
+            {status === "error" && (
+              <p className="text-xs text-red-600">Invalid email address.</p>
+            )}
+          </form>
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="container py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-[var(--school-cream)]/40">
-          <span>
-            © {new Date().getFullYear()} Dr. Gambo Hamza Islamic Academy. All
-            rights reserved.
-          </span>
-          <span>www.dghacademy.com · www.dghacademy.edu.ng</span>
-          <a
-            href="#top"
-            className="back-to-top text-[var(--school-cream)]/90 hover:text-[var(--school-accent)]"
-          >
-            ↑ Back to top
-          </a>
-        </div>
+      <div className="border-t border-[var(--school-primary-dark)]/10 py-4 text-xs text-[var(--school-primary-dark)]/50 text-center">
+        © {new Date().getFullYear()} Dr. Gambo Hamza Islamic Academy. All rights
+        reserved. | Built with care for the community.
       </div>
     </footer>
   );

@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 import SchoolNavbar from "@/components/school/SchoolNavbar";
 import SchoolFooter from "@/components/school/SchoolFooter";
+import GalleryHero from "@/components/school/GalleryHero";
 import {
   schoolInfo,
-  schoolHero,
   schoolStats,
   administrator,
   coreValues,
@@ -44,72 +44,8 @@ export default function HomePage() {
     <>
       <SchoolNavbar />
       <main id="top">
-        {/* ── HERO ── */}
-        <section className="relative min-h-[92vh] school-gradient pattern-islamic flex items-center overflow-hidden">
-          {/* Decorative circles */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[var(--school-accent)]/5 -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-white/3 translate-y-1/2 -translate-x-1/4 pointer-events-none" />
-
-          <div className="container relative z-10 py-24">
-            <div className="max-w-2xl">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-[var(--school-accent)]/15 border border-[var(--school-accent)]/30 text-[var(--school-accent)] text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 animate-fade-up">
-                <Clock size={12} /> {schoolHero.badge}
-              </div>
-
-              {/* Headline */}
-              <h1 className="font-amiri text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up delay-100">
-                {schoolHero.headline}
-              </h1>
-
-              {/* Motto */}
-              <p className="font-amiri italic text-[var(--school-accent)] text-xl mb-4 animate-fade-up delay-200">
-                "{schoolInfo.motto}"
-              </p>
-
-              {/* Sub */}
-              <p className="text-[var(--school-cream)]/80 text-lg leading-relaxed mb-10 max-w-xl animate-fade-up delay-300">
-                {schoolHero.subheadline}
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-4 animate-fade-up delay-400">
-                <Link
-                  href={schoolHero.ctaPrimary.href}
-                  className="btn-primary btn-school"
-                >
-                  {schoolHero.ctaPrimary.label} <ArrowRight size={16} />
-                </Link>
-                <Link
-                  href={schoolHero.ctaSecondary.href}
-                  className="btn-primary btn-school-outline border-[var(--school-cream)]/40 text-[var(--school-cream)] hover:bg-white/10 hover:border-white/60"
-                >
-                  {schoolHero.ctaSecondary.label}
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Madrasa switcher */}
-          <div className="absolute bottom-8 right-8 hidden lg:block animate-fade-in delay-500">
-            <Link
-              href="/madrasa"
-              className="flex items-center gap-3 bg-[var(--madrasa-primary)]/90 backdrop-blur-sm text-[var(--madrasa-ivory)] px-5 py-3.5 rounded-xl hover:bg-[var(--madrasa-primary)] transition-all group border border-[var(--madrasa-accent)]/30"
-            >
-              <Moon size={18} className="text-[var(--madrasa-accent)]" />
-              <div>
-                <div className="text-xs font-bold text-[var(--madrasa-accent)] uppercase tracking-wider">
-                  Evening Madrasa
-                </div>
-                <div className="text-xs text-white/60">4:00pm – 7:00pm</div>
-              </div>
-              <ArrowRight
-                size={14}
-                className="group-hover:translate-x-1 transition-transform text-[var(--madrasa-accent)]"
-              />
-            </Link>
-          </div>
-        </section>
+        {/* ── HERO (GalleryHero component) ── */}
+        <GalleryHero />
 
         {/* ── STATS STRIP ── */}
         <section className="bg-[var(--school-cream)] border-b border-[var(--school-cream-dark)]">
@@ -322,16 +258,11 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {facilities.map((f) => (
-                <div
-                  key={f.name}
-                  className="facility-card"
-                >
+                <div key={f.name} className="facility-card">
                   <div className="facility-icon">
                     <CheckCircle2 size={16} />
                   </div>
-                  <span className="text-sm font-semibold">
-                    {f.name}
-                  </span>
+                  <span className="text-sm font-semibold">{f.name}</span>
                 </div>
               ))}
             </div>

@@ -1,12 +1,13 @@
-// ============================================================
-// SCHOOL DATA — Dr. Gambo Hamza Islamic Academy (Morning School)
-// TO MIGRATE TO CMS: Replace exports with API fetch calls
-// e.g., export const schoolInfo = await sanityClient.fetch(query)
-// ============================================================
 
 import type {
-  SchoolInfo, HeroContent, StaffMember, Program,
-  Facility, CoreValue, Stat, NavLink
+  SchoolInfo,
+  HeroContent,
+  StaffMember,
+  Program,
+  Facility,
+  CoreValue,
+  Stat,
+  NavLink,
 } from "@/lib/types";
 
 export const schoolNav: NavLink[] = [
@@ -22,13 +23,13 @@ export const schoolNav: NavLink[] = [
 export const schoolInfo: SchoolInfo = {
   fullName: "Dr. Gambo Hamza Islamic Academy",
   shortName: "DGH Academy",
-  motto: "Khairun Nas Man Yan Faun Nas",
+  motto: "",
   established: 2025,
   type: "Nursery & Primary",
   ownership: "Private",
   address: "D12 Sabon Layi, Gangare, Jos, Plateau State, Nigeria",
-  phone: "08168369019",
-  email: "drgambohamzaislamicacademy@gmail.com",
+  phone: "",
+  email: "",
   googleMapsUrl: "https://maps.app.goo.gl/WbqF2k7sDrw5i7yw8",
   workingHours: "7:00am – 2:00pm",
   colors: ["#6B3A2A", "#F5ECD7", "#FFFFFF"],
@@ -79,42 +80,77 @@ export const schoolVision = `To be a distinguished academy where students excel 
 export const schoolMission = `To provide a nurturing and inclusive learning environment that integrates high-quality conventional education with a deep understanding of Islamic values, empowering students to become knowledgeable, ethical and productive members of society.`;
 
 export const coreValues: CoreValue[] = [
-  { title: "Faith", description: "Grounding every action in sincere belief and God-consciousness.", icon: "star" },
-  { title: "Integrity", description: "Upholding honesty and strong moral principles in all we do.", icon: "shield" },
-  { title: "Excellence", description: "Striving for the highest standards academically and morally.", icon: "award" },
-  { title: "Respect", description: "Honouring every individual regardless of background.", icon: "heart" },
-  { title: "Compassion", description: "Caring for one another and for our wider community.", icon: "users" },
-  { title: "Community Partnership", description: "Working with families and communities to raise well-rounded pupils.", icon: "handshake" },
-  { title: "Lifelong Learning", description: "Instilling a love for knowledge that never ends.", icon: "book-open" },
+  {
+    title: "Faith",
+    description:
+      "Grounding every action in sincere belief and God-consciousness.",
+    icon: "star",
+  },
+  {
+    title: "Integrity",
+    description: "Upholding honesty and strong moral principles in all we do.",
+    icon: "shield",
+  },
+  {
+    title: "Excellence",
+    description: "Striving for the highest standards academically and morally.",
+    icon: "award",
+  },
+  {
+    title: "Respect",
+    description: "Honouring every individual regardless of background.",
+    icon: "heart",
+  },
+  {
+    title: "Compassion",
+    description: "Caring for one another and for our wider community.",
+    icon: "users",
+  },
+  {
+    title: "Community Partnership",
+    description:
+      "Working with families and communities to raise well-rounded pupils.",
+    icon: "handshake",
+  },
+  {
+    title: "Lifelong Learning",
+    description: "Instilling a love for knowledge that never ends.",
+    icon: "book-open",
+  },
 ];
 
 export const academicPrograms: Program[] = [
   {
     title: "Toddler Class",
-    description: "A gentle, play-based introduction to learning for our youngest pupils in a safe, nurturing environment.",
+    description:
+      "A gentle, play-based introduction to learning for our youngest pupils in a safe, nurturing environment.",
     icon: "baby",
     levels: ["Ages 2–3"],
   },
   {
     title: "Nursery (1 & 2)",
-    description: "Building early literacy, numeracy, and social skills with a blend of Nigerian and British curriculum.",
+    description:
+      "Building early literacy, numeracy, and social skills with a blend of Nigerian and British curriculum.",
     icon: "pencil",
     levels: ["Nursery 1", "Nursery 2"],
   },
   {
     title: "Primary (Basic 1–4)",
-    description: "A rigorous, well-rounded academic programme integrating Islamic studies, ICT, and real-world learning strategies.",
+    description:
+      "A rigorous, well-rounded academic programme integrating Islamic studies, ICT, and real-world learning strategies.",
     icon: "book",
     levels: ["Basic 1", "Basic 2", "Basic 3", "Basic 4"],
   },
   {
     title: "Islamic Studies",
-    description: "Dedicated Quran, Hadith, and Islamic moral education woven into daily school life.",
+    description:
+      "Dedicated Quran, Hadith, and Islamic moral education woven into daily school life.",
     icon: "moon",
   },
   {
     title: "ICT & Coding",
-    description: "Age-appropriate technology and coding skills preparing pupils for the digital future.",
+    description:
+      "Age-appropriate technology and coding skills preparing pupils for the digital future.",
     icon: "monitor",
   },
 ];

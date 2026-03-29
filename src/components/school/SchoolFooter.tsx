@@ -69,7 +69,7 @@ export default function SchoolFooter() {
   ];
 
   return (
-    <footer className="relative bg-[var(--school-primary-dark)] overflow-hidden text-white">
+    <footer className="relative bg-[var(--school-primary-dark)] p-5 overflow-hidden text-white">
       {/* Islamic star pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -78,29 +78,7 @@ export default function SchoolFooter() {
           backgroundSize: "80px 80px",
         }}
       />
-
-      {/* Top accent gradient line */}
-      <div className="h-[10px] w-full bg-gradient-to-r from-white via-white to-white" />
-
-      {/* Madrasa switcher ribbon */}
-      <div className="relative border-b border-white/[0.07] bg-white/[0.03]">
-        <div className="container py-3 flex items-center justify-between gap-4 flex-wrap">
-          <p className="text-white/40 text-xs">
-            Also looking for evening Islamic education?
-          </p>
-          <Link
-            href="/madrasa"
-            className="inline-flex items-center gap-2 text-xs font-bold text-white hover:opacity-80 transition-opacity group"
-          >
-            <Moon size={12} />
-            Visit DGH Madrasa — 4:00pm to 7:00pm
-            <ArrowRight
-              size={12}
-              className="group-hover:translate-x-0.5 transition-transform"
-            />
-          </Link>
-        </div>
-      </div>
+     
 
       {/* Main footer content */}
       <div className="relative container py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
@@ -114,7 +92,7 @@ export default function SchoolFooter() {
               <div className="absolute inset-0 rounded-full border border-[var(--school-accent)]/40" />
             </div>
             <div>
-              <div className="font-amiri font-bold text-white text-[15px] px-30 leading-snug">
+              <div className="font-amiri font-bold text-white text-[15px] leading-snug">
                 {schoolInfo.fullName}
               </div>
               <div className="text-white text-xs mt-0.5 font-medium">
@@ -122,12 +100,7 @@ export default function SchoolFooter() {
               </div>
             </div>
           </div>
-
-          <div className="pl-4 border-l-2 border-[var(--school-accent)]/35">
-            <p className="font-amiri italic text-white text-lg leading-snug">
-              &ldquo;{schoolInfo.motto}&rdquo;
-            </p>
-          </div>
+         
 
           <p className="text-white/50 text-sm leading-relaxed">
             A distinguished Academy where pupils excel academically, morally and
@@ -155,7 +128,7 @@ export default function SchoolFooter() {
 
         {/* Quick Links */}
         <div className="lg:col-span-2">
-          <h4 className="flex items-center gap-2 text-white font-bold text-[10px] uppercase tracking-[0.16em] mb-5">
+          <h4 className="flex items-center gap-2 text-white font-bold text-[15px] uppercase tracking-[0.20em] mb-5">
             <span className="w-5 h-px bg-[var(--school-accent)]" />
             Quick Links
           </h4>

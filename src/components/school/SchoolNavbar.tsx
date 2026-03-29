@@ -48,20 +48,7 @@ export default function SchoolNavbar() {
           <span className="font-amiri opacity-80 italic">
             {schoolInfo.motto}
           </span>
-          <div className="flex items-center gap-5">
-            <a
-              href={`tel:${schoolInfo.phone}`}
-              className="flex items-center gap-1.5 hover:text-[var(--school-accent)] transition-colors"
-            >
-              <Phone size={13} /> {schoolInfo.phone}
-            </a>
-            <a
-              href={`mailto:${schoolInfo.email}`}
-              className="flex items-center gap-1.5 hover:text-[var(--school-accent)] transition-colors"
-            >
-              <Mail size={13} /> {schoolInfo.email}
-            </a>
-          </div>
+          
         </div>
       </div>
 
@@ -83,9 +70,7 @@ export default function SchoolNavbar() {
               <div className="font-amiri font-bold text-[var(--school-primary)] text-base leading-tight">
                 DGH Academy
               </div>
-              <div className="text-xs text-[var(--school-text-muted)] leading-tight">
-                Morning School
-              </div>
+              
             </div>
           </Link>
 

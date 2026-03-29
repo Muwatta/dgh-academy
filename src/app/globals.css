@@ -544,5 +544,3 @@ textarea {
     font-size: 1.75rem;
   }
 }
-
-/* For dark mode, root vars are already set in .theme-dark, no need invalid [..] class selectors. */

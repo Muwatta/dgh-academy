@@ -1,8 +1,3 @@
-// ============================================================
-// SHARED TYPES — DGH Academy
-// These types are designed for easy CMS migration (Sanity, Contentful)
-// ============================================================
-
 export interface NavLink {
   label: string;
   href: string;

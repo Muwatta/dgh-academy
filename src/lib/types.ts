@@ -25,6 +25,7 @@ export interface SchoolInfo {
   workingHours: string;
   colors: string[];
   facebook?: string;
+  
 }
 
 export interface StaffMember {

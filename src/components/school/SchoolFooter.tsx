@@ -1,7 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  ArrowRight,
+  Moon,
+  Send,
+} from "lucide-react";
 import { useMemo, useState } from "react";
 import { schoolInfo, schoolNav } from "@/data/school";
 
@@ -10,11 +22,10 @@ export default function SchoolFooter() {
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
-
   const emailValid = useMemo(() => /^\S+@\S+\.\S+$/.test(email), [email]);
 
-  const handleSubscribe = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (!emailValid) {
       setStatus("error");
       return;
@@ -23,126 +34,260 @@ export default function SchoolFooter() {
     setTimeout(() => setStatus("success"), 700);
   };
 
+  const socialLinks = [
+    {
+      icon: <Facebook size={17} />,
+      href: schoolInfo.facebook || "#",
+      label: "Facebook",
+    },
+    { icon: <Instagram size={17} />, href: "#", label: "Instagram" },
+    { icon: <Twitter size={17} />, href: "#", label: "Twitter" },
+    { icon: <Youtube size={17} />, href: "#", label: "YouTube" },
+  ];
+
+  const contactItems = [
+    {
+      icon: <MapPin size={14} />,
+      value: schoolInfo.address,
+      href: schoolInfo.googleMapsUrl,
+    },
+    {
+      icon: <Phone size={14} />,
+      value: schoolInfo.phone,
+      href: `tel:${schoolInfo.phone}`,
+    },
+    {
+      icon: <Mail size={14} />,
+      value: schoolInfo.email,
+      href: `mailto:${schoolInfo.email}`,
+    },
+    {
+      icon: <Clock size={14} />,
+      value: schoolInfo.workingHours,
+      href: undefined,
+    },
+  ];
+
   return (
-    <footer className="bg-gradient-to-r from-[#F5ECD7] via-[#ffffff] to-[#f8f1e5] text-[var(--school-primary-dark)]">
-      <div className="container py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div className="lg:col-span-2">
-          <div className="text-2xl font-bold text-[var(--school-primary-dark)] mb-2">
-            {schoolInfo.fullName}
-          </div>
-          <div className="flex flex-wrap gap-3 text-xs text-[var(--school-primary-dark)]/70 mb-3">
-            <span>Est. {schoolInfo.established}</span>
-            <span className="py-1 px-2 bg-[var(--school-accent)]/20 rounded-full">
-              {schoolInfo.type}
-            </span>
-            <span className="py-1 px-2 bg-[var(--school-accent)]/20 rounded-full">
-              {schoolInfo.ownership}
-            </span>
-          </div>
-          <p className="text-sm text-[var(--school-primary-dark)]/80 max-w-xl leading-relaxed">
-            A distinguished academy where pupils excel academically, morally,
-            and spiritually, guided by ethical values and strong community
-            engagement.
+    <footer className="relative bg-[var(--school-primary-dark)] overflow-hidden text-white">
+      {/* Islamic star pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C4955A' fill-rule='evenodd'%3E%3Cpath d='M40 0L50 20H70L55 32L60 52L40 40L20 52L25 32L10 20H30L40 0z'/%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: "80px 80px",
+        }}
+      />
+
+      {/* Top accent gradient line */}
+      <div className="h-[10px] w-full bg-gradient-to-r from-white via-white to-white" />
+
+      {/* Madrasa switcher ribbon */}
+      <div className="relative border-b border-white/[0.07] bg-white/[0.03]">
+        <div className="container py-3 flex items-center justify-between gap-4 flex-wrap">
+          <p className="text-white/40 text-xs">
+            Also looking for evening Islamic education?
           </p>
-          <div className="mt-4 flex gap-3">
-            {schoolInfo.facebook && (
+          <Link
+            href="/madrasa"
+            className="inline-flex items-center gap-2 text-xs font-bold text-white hover:opacity-80 transition-opacity group"
+          >
+            <Moon size={12} />
+            Visit DGH Madrasa — 4:00pm to 7:00pm
+            <ArrowRight
+              size={12}
+              className="group-hover:translate-x-0.5 transition-transform"
+            />
+          </Link>
+        </div>
+      </div>
+
+      {/* Main footer content */}
+      <div className="relative container py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+        {/* Brand column */}
+        <div className="lg:col-span-4 space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-[var(--school-accent)] to-[var(--school-primary)] flex items-center justify-center shadow-lg shadow-black/30 shrink-0">
+              <span className="font-amiri font-bold text-white text-xl">
+                DGH
+              </span>
+              <div className="absolute inset-0 rounded-full border border-[var(--school-accent)]/40" />
+            </div>
+            <div>
+              <div className="font-amiri font-bold text-white text-[15px] px-30 leading-snug">
+                {schoolInfo.fullName}
+              </div>
+              <div className="text-white text-xs mt-0.5 font-medium">
+                Est. {schoolInfo.established}
+              </div>
+            </div>
+          </div>
+
+          <div className="pl-4 border-l-2 border-[var(--school-accent)]/35">
+            <p className="font-amiri italic text-white text-lg leading-snug">
+              &ldquo;{schoolInfo.motto}&rdquo;
+            </p>
+          </div>
+
+          <p className="text-white/50 text-sm leading-relaxed">
+            A distinguished Academy where pupils excel academically, morally and
+            spiritually — rooted in the teachings of Islam, serving the Gangare
+            community, Jos.
+          </p>
+
+          <div className="flex gap-2 pt-1">
+            {socialLinks.map(({ icon, href, label }) => (
               <a
-                href={schoolInfo.facebook}
+                key={label}
+                href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--school-primary-dark)] hover:text-[var(--school-accent)] transition-colors"
+                aria-label={label}
+                className="w-9 h-9 rounded-lg bg-white/[0.07] border border-white/[0.09] flex items-center justify-center text-white/45 hover:bg-[var(--school-accent)] hover:text-white hover:border-[var(--school-accent)] transition-all duration-200"
               >
-                <Facebook size={22} />
+                {icon}
               </a>
-            )}
-            <a
-              href="#"
-              className="text-[var(--school-primary-dark)] hover:text-[var(--school-accent)] transition-colors"
-            >
-              <Instagram size={22} />
-            </a>
-            <a
-              href="#"
-              className="text-[var(--school-primary-dark)] hover:text-[var(--school-accent)] transition-colors"
-            >
-              <Twitter size={22} />
-            </a>
-            <a
-              href="#"
-              className="text-[var(--school-primary-dark)] hover:text-[var(--school-accent)] transition-colors"
-            >
-              <Youtube size={22} />
-            </a>
+            ))}
           </div>
         </div>
 
-        <div>
-          <h4 className="font-semibold text-[var(--school-primary-dark)] mb-3">
+        <div className="hidden lg:block lg:col-span-1" />
+
+        {/* Quick Links */}
+        <div className="lg:col-span-2">
+          <h4 className="flex items-center gap-2 text-white font-bold text-[10px] uppercase tracking-[0.16em] mb-5">
+            <span className="w-5 h-px bg-[var(--school-accent)]" />
             Quick Links
           </h4>
-          <ul className="space-y-2 text-sm text-[var(--school-primary-dark)]/80">
+          <ul className="space-y-3">
             {schoolNav
-              .filter((link) => link.label !== "Madrasa →")
+              .filter((l) => l.label !== "Madrasa →")
               .map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-[var(--school-accent)] transition-colors"
+                    className="group flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors"
                   >
+                    <span className="w-0 group-hover:w-3 h-px bg-[var(--school-accent)] transition-all duration-200 overflow-hidden shrink-0" />
                     {link.label}
                   </Link>
                 </li>
               ))}
+            <li className="pt-2 border-t border-white/[0.07] mt-1">
+              <Link
+                href="/madrasa"
+                className="flex items-center gap-2 text-sm text-white/65 hover:text-white transition-colors font-semibold"
+              >
+                <Moon size={12} /> Evening Madrasa
+              </Link>
+            </li>
           </ul>
         </div>
 
-        <div>
-          <h4 className="font-semibold text-[var(--school-primary-dark)] mb-3">
-            Visit Us
+        {/* Contact */}
+        <div className="lg:col-span-3">
+          <h4 className="flex items-center gap-2 text-white font-bold text-[10px] uppercase tracking-[0.16em] mb-5">
+            <span className="w-5 h-px bg-[var(--school-accent)]" />
+            Contact Us
           </h4>
-          <ul className="space-y-2 text-sm text-[var(--school-primary-dark)]/80">
-            <li>{schoolInfo.address}</li>
-            {schoolInfo.phone ? <li>📞 {schoolInfo.phone}</li> : null}
-            {schoolInfo.email ? <li>✉️ {schoolInfo.email}</li> : null}
-            <li>🕒 {schoolInfo.workingHours}</li>
+          <ul className="space-y-4">
+            {contactItems.map(({ icon, value, href }) => (
+              <li key={value}>
+                {href ? (
+                  <a
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 text-sm text-white/50 hover:text-white transition-colors group"
+                  >
+                    <span className="mt-0.5 text-white/55 group-hover:text-white transition-colors shrink-0">
+                      {icon}
+                    </span>
+                    <span className="leading-relaxed break-all">{value}</span>
+                  </a>
+                ) : (
+                  <div className="flex items-start gap-3 text-sm text-white/50">
+                    <span className="mt-0.5 text-white/55 shrink-0">
+                      {icon}
+                    </span>
+                    <span className="leading-relaxed">{value}</span>
+                  </div>
+                )}
+              </li>
+            ))}
           </ul>
+          <a
+            href={schoolInfo.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-5 text-xs font-semibold px-4 py-2 rounded-lg border border-[var(--school-accent)]/20 text-white/60 hover:border-[var(--school-accent)]/50 hover:text-white hover:bg-[var(--school-accent)]/[0.06] transition-all"
+          >
+            <MapPin size={11} /> View on Google Maps
+          </a>
         </div>
 
-        <div>
-          <h4 className="font-semibold text-[var(--school-primary-dark)] mb-3">
+        {/* Newsletter */}
+        <div className="lg:col-span-2">
+          <h4 className="flex items-center gap-2 text-white font-bold text-[10px] uppercase tracking-[0.16em] mb-5">
+            <span className="w-5 h-px bg-[var(--school-accent)]" />
             Newsletter
           </h4>
-          <p className="text-sm text-[var(--school-primary-dark)]/80 mb-3">
-            Get school updates and events straight to your inbox.
+          <p className="text-sm text-white/50 leading-relaxed mb-4">
+            Stay updated with school news, events and announcements.
           </p>
-          <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
+          <form onSubmit={handleSubscribe} className="space-y-3">
             <input
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="your.email@example.com"
-              className="w-full rounded-xl border border-[var(--school-accent)]/40 bg-white px-3 py-2 text-sm text-[var(--school-primary-dark)] outline-none focus:border-[var(--school-primary)]"
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setStatus("idle");
+              }}
+              placeholder="your@email.com"
+              className="w-full bg-white/[0.07] border border-white/[0.1] rounded-lg px-4 py-2.5 text-sm text-white placeholder-white/25 outline-none focus:border-[var(--school-accent)]/50 focus:bg-white/[0.09] transition-all"
             />
             <button
-              disabled={status === "submitting"}
               type="submit"
-              className="rounded-xl bg-[var(--school-primary)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--school-accent)] transition disabled:bg-[var(--school-accent)]/40"
+              disabled={status === "submitting" || status === "success"}
+              className="w-full flex items-center justify-center gap-2 bg-[var(--school-accent)] hover:brightness-110 text-white font-bold text-sm py-2.5 rounded-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {status === "submitting" ? "Submitting..." : "Subscribe"}
+              {status === "submitting" ? (
+                <span className="animate-spin w-4 h-4 border-2 border-current border-t-transparent rounded-full" />
+              ) : status === "success" ? (
+                "✓ Subscribed!"
+              ) : (
+                <>
+                  <Send size={13} /> Subscribe
+                </>
+              )}
             </button>
-            {status === "success" && (
-              <p className="text-xs text-green-600">Subscribed successfully!</p>
-            )}
             {status === "error" && (
-              <p className="text-xs text-red-600">Invalid email address.</p>
+              <p className="text-xs text-red-400/80">
+                Please enter a valid email.
+              </p>
+            )}
+            {status === "success" && (
+              <p className="text-xs text-green-400/80">
+                Subscribed! JazakAllahu Khayran.
+              </p>
             )}
           </form>
         </div>
       </div>
 
-      <div className="border-t border-[var(--school-primary-dark)]/10 py-4 text-xs text-[var(--school-primary-dark)]/50 text-center">
-        © {new Date().getFullYear()} Dr. Gambo Hamza Islamic Academy. All rights
-        reserved. | Built with care for the community.
+      {/* Bottom bar */}
+      <div className="relative border-t border-white/[0.07]">
+        <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-white/25 text-center sm:text-left">
+            © {new Date().getFullYear()} Dr. Gambo Hamza Islamic Academy. All
+            rights reserved.
+          </p>
+          <div className="flex items-center gap-3 text-xs text-white/20">
+            <span>www.dghacademy.com</span>
+            <span className="w-1 h-1 rounded-full bg-[var(--school-accent)]/35 shrink-0" />
+            <span>www.dghacademy.edu.ng</span>
+          </div>
+        </div>
       </div>
     </footer>
   );

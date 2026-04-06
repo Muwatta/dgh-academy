@@ -56,6 +56,17 @@ export const metadata: Metadata = {
     description: "A distinguished Academy — Gangare, Jos, Nigeria.",
     images: ["/og-image.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    shortcut: [
+      { url: "/favicon/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: [
+      { url: "/favicon/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+  },
   robots: {
     index: true,
     follow: true,

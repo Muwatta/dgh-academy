@@ -79,17 +79,29 @@ export default function GalleryPage() {
     <>
       <SchoolNavbar />
       <main>
-        <section className="school-gradient pattern-islamic py-20">
-          <div className="container">
-            <div className="section-tag bg-[var(--school-accent)]/15 text-[var(--school-accent)]">
+        <section className="relative school-gradient pattern-islamic py-24 overflow-hidden">
+          {/* contrast layer */}
+          <div className="absolute inset-0 bg-black/25"></div>
+
+          <div className="container relative z-10">
+            {/* Tag */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--school-accent)]/10 text-white text-sm font-medium tracking-wide">
+              <span className="w-2 h-2 rounded-full bg-[var(--school-accent)]"></span>
               Our School Life
             </div>
-            <h1 className="font-amiri text-5xl font-bold text-papayawhip mt-2 mb-4">
+
+            {/* Heading */}
+            <h1 className="font-amiri text-4xl md:text-5xl font-semibold text-[var(--school-cream)] mt-6 leading-tight max-w-2xl">
               Gallery
             </h1>
-            <p className="text-[var(--school-cream)]/70 max-w-xl">
-              A glimpse into the daily life, events and environment of DGH
-              Academy.
+
+            {/* Accent */}
+            <div className="w-12 h-[2px] bg-[var(--school-accent)] mt-4"></div>
+
+            {/* Description */}
+            <p className="mt-6 text-base md:text-lg text-[var(--school-cream)]/80 max-w-lg leading-relaxed">
+              A glimpse into the daily life, events, and learning environment of
+              DGH Academy.
             </p>
           </div>
         </section>

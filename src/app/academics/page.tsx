@@ -18,17 +18,29 @@ export default function AcademicsPage() {
       <SchoolNavbar />
       <main>
         {/* Hero */}
-        <section className="school-gradient pattern-islamic py-20">
-          <div className="container">
-            <div className="section-tag bg-[var(--school-accent)]/15 text-[var(--school-accent)]">
+        <section className="relative school-gradient pattern-islamic py-24 overflow-hidden">
+          {/* subtle overlay for readability */}
+          <div className="absolute inset-0 bg-black/30"></div>
+
+          <div className="container relative z-10">
+            {/* Tag */}
+            <div className="inline-block px-4 py-1.5 rounded-full bg-[var(--school-accent)]/10 text-papayawhip text-sm font-medium tracking-wide">
               Learning & Excellence
             </div>
-            <h1 className="font-amiri text-5xl font-bold text-papayawhip mt-2 mb-4">
+
+            {/* Heading */}
+            <h1 className="font-amiri text-4xl md:text-5xl font-semibold text-[var(--school-cream)] mt-6 leading-tight max-w-2xl">
               Academic Programmes
             </h1>
-            <p className="text-[var(--school-cream)]/70 max-w-xl">
-              A rigorous Nigerian & British dual curriculum from Toddler to Basic 4, integrating
-              Islamic studies, ICT, coding and real-world learning strategies.
+
+            {/* Divider accent */}
+            <div className="w-16 h-1 bg-[var(--school-accent)] mt-4 rounded-full"></div>
+
+            {/* Description */}
+            <p className="mt-6 text-base md:text-lg text-[var(--school-cream)]/80 max-w-xl leading-relaxed">
+              A rigorous Nigerian and British dual curriculum from Toddler to
+              Basic 4, integrating Islamic studies, ICT, coding, and real world
+              learning strategies.
             </p>
           </div>
         </section>
@@ -45,14 +57,16 @@ export default function AcademicsPage() {
                   Nigerian & British Dual Curriculum
                 </h2>
                 <p className="text-[var(--school-text-muted)] leading-relaxed mb-4">
-                  DGH Academy delivers a carefully integrated dual curriculum that meets Nigerian
-                  national standards while incorporating the internationally respected British
-                  primary framework. This gives our pupils the best of both worlds — local
-                  relevance and global competitiveness.
+                  DGH Academy delivers a carefully integrated dual curriculum
+                  that meets Nigerian national standards while incorporating the
+                  internationally respected British primary framework. This
+                  gives our pupils the best of both worlds — local relevance and
+                  global competitiveness.
                 </p>
                 <p className="text-[var(--school-text-muted)] leading-relaxed mb-6">
-                  At every level, Islamic Studies is woven into the academic programme, ensuring
-                  that intellectual development and moral growth happen together.
+                  At every level, Islamic Studies is woven into the academic
+                  programme, ensuring that intellectual development and moral
+                  growth happen together.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -75,25 +89,60 @@ export default function AcademicsPage() {
 
               {/* Class levels */}
               <div className="bg-[var(--school-cream)] rounded-2xl p-8">
-                <h3 className="font-bold text-[var(--school-primary)] mb-5">Class Structure</h3>
+                <h3 className="font-bold text-[var(--school-primary)] mb-5">
+                  Class Structure
+                </h3>
                 <div className="space-y-3">
                   {[
-                    { level: "Toddler", ages: "Ages 2–3", desc: "Play-based early learning" },
-                    { level: "Nursery 1", ages: "Ages 3–4", desc: "Early literacy & numeracy" },
-                    { level: "Nursery 2", ages: "Ages 4–5", desc: "School readiness skills" },
-                    { level: "Basic 1", ages: "Ages 5–6", desc: "Foundation year" },
-                    { level: "Basic 2", ages: "Ages 6–7", desc: "Core subject mastery" },
-                    { level: "Basic 3", ages: "Ages 7–8", desc: "Independent learning" },
-                    { level: "Basic 4", ages: "Ages 8–9", desc: "Advanced primary" },
+                    {
+                      level: "Toddler",
+                      ages: "Ages 2–3",
+                      desc: "Play-based early learning",
+                    },
+                    {
+                      level: "Nursery 1",
+                      ages: "Ages 3–4",
+                      desc: "Early literacy & numeracy",
+                    },
+                    {
+                      level: "Nursery 2",
+                      ages: "Ages 4–5",
+                      desc: "School readiness skills",
+                    },
+                    {
+                      level: "Basic 1",
+                      ages: "Ages 5–6",
+                      desc: "Foundation year",
+                    },
+                    {
+                      level: "Basic 2",
+                      ages: "Ages 6–7",
+                      desc: "Core subject mastery",
+                    },
+                    {
+                      level: "Basic 3",
+                      ages: "Ages 7–8",
+                      desc: "Independent learning",
+                    },
+                    {
+                      level: "Basic 4",
+                      ages: "Ages 8–9",
+                      desc: "Advanced primary",
+                    },
                   ].map((item) => (
-                    <div key={item.level} className="flex items-center gap-4 bg-white rounded-lg p-3">
+                    <div
+                      key={item.level}
+                      className="flex items-center gap-4 bg-white rounded-lg p-3"
+                    >
                       <span className="w-20 text-xs font-bold text-[var(--school-primary)] shrink-0">
                         {item.level}
                       </span>
                       <span className="text-xs text-[var(--school-accent)] font-semibold w-16 shrink-0">
                         {item.ages}
                       </span>
-                      <span className="text-xs text-[var(--school-text-muted)]">{item.desc}</span>
+                      <span className="text-xs text-[var(--school-text-muted)]">
+                        {item.desc}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -161,7 +210,9 @@ export default function AcademicsPage() {
                     size={16}
                     className="text-[var(--school-accent)] shrink-0 mt-0.5"
                   />
-                  <span className="text-[var(--school-cream)] text-sm">{item}</span>
+                  <span className="text-[var(--school-cream)] text-sm">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>

@@ -45,6 +45,7 @@
 }
 
 .theme-light {
+  color-scheme: light;
   --page-bg: var(--school-white);
   --page-text: var(--school-text);
   --page-muted-text: var(--school-text-muted);
@@ -53,6 +54,7 @@
 }
 
 .theme-dark {
+  color-scheme: dark;
   --page-bg: #0b1220;
   --page-text: #e2e8f0;
   --page-muted-text: #c3d2ea;
@@ -80,6 +82,7 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-family: var(--font-nunito), sans-serif;
   line-height: 1.7;
   color: var(--page-text);
@@ -87,6 +90,15 @@ body {
   transition:
     background var(--transition),
     color var(--transition);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
 }
 
 .font-amiri {
@@ -293,6 +305,16 @@ body {
   border-radius: 0.6rem;
   transition: all var(--transition);
   position: relative;
+  color: var(--school-text);
+}
+
+.navbar-link:visited {
+  color: var(--school-text);
+}
+
+.navbar-link:active,
+.navbar-link[aria-current="page"] {
+  color: var(--school-primary);
 }
 
 .navbar-link::after {

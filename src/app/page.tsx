@@ -107,7 +107,7 @@ export default function HomePage() {
       <SchoolNavbar />
       <main id="top">
         {/* ── HERO SLIDER ── */}
-        <section className="relative h-[85vh] min-h-[550px] w-full overflow-hidden">
+        <section className="relative h-[70vh] min-h-[450px] md:h-[85vh] md:min-h-[550px] w-full overflow-hidden">
           {heroSlides.map((slide, index) => (
             <div
               key={slide.id}
@@ -126,7 +126,7 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
               <div className="absolute inset-0 flex items-center">
-                <div className="container mx-auto px-4 md:px-8">
+                <div className="container mx-auto px-4 sm:px-6 md:px-8">
                   <div className="max-w-2xl text-white">
                     <div className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase bg-[var(--school-accent)]/90 rounded-full backdrop-blur-sm">
                       Dr. Gambo Hamza Islamic Academy
@@ -421,7 +421,11 @@ export default function HomePage() {
                 <h3 className="font-amiri text-2xl font-bold text-[var(--school-primary)] mb-6">
                   Make an Enquiry
                 </h3>
-                <form action="https://formspree.io/f/mdapylrr" method="POST" className="space-y-4">
+                <form
+                  action="https://formspree.io/f/mdapylrr"
+                  method="POST"
+                  className="space-y-4"
+                >
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-bold text-[var(--school-text-muted)] uppercase tracking-wider block mb-1.5">

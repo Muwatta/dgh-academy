@@ -25,10 +25,7 @@ export default function SchoolNavbar() {
       return;
     }
 
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    setTheme(prefersDark ? "dark" : "light");
+    setTheme("light");
   }, []);
 
   useEffect(() => {

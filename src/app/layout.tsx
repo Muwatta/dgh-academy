@@ -80,7 +80,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${amiri.variable} ${nunitoSans.variable}`}>
+    <html
+      lang="en"
+      className={`${amiri.variable} ${nunitoSans.variable} theme-light`}
+    >
       <body className="font-nunito antialiased">
         {children}
         <Analytics />

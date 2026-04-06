@@ -15,21 +15,40 @@ export default function AdmissionsPage() {
     <>
       <SchoolNavbar />
       <main>
-        <section className="school-gradient pattern-islamic py-20">
-          <div className="container">
-            <div className="section-tag bg-[var(--school-accent)]/15 text-[var(--school-accent)]">
+        <section className="relative school-gradient pattern-islamic py-24 overflow-hidden">
+          {/* overlay for contrast */}
+          <div className="absolute inset-0 bg-black/30"></div>
+
+          <div className="container relative z-10">
+            {/* Tag */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--school-accent)]/10 text-white text-lg font-medium tracking-wide">
+              <span className="w-2 h-2 rounded-full bg-[var(--school-accent)]"></span>
               Join Us
             </div>
-            <h1 className="font-amiri text-5xl font-bold text-papayawhip mt-2 mb-4">
+
+            {/* Heading */}
+            <h1 className="font-amiri text-4xl md:text-5xl font-semibold text-[var(--school-cream)] mt-6 leading-tight max-w-2xl">
               Admissions
             </h1>
-            <p className="text-[var(--school-cream)]/70 max-w-xl">
+
+            {/* Accent line */}
+            <div className="w-14 h-[2px] bg-[var(--school-accent)] mt-4"></div>
+
+            {/* Description */}
+            <p className="mt-6 text-base md:text-lg text-[var(--school-cream)]/80 max-w-xl leading-relaxed">
               We welcome applications for all classes from Toddler to Basic 4.
-              Follow the steps below to secure your child's place.
+              Follow the steps below to secure your child’s place.
             </p>
+
+            {/* Optional CTA */}
+            <div className="mt-8">
+              <button className="px-6 py-3 bg-[var(--school-accent)] text-white rounded-md text-sm font-medium hover:opacity-90 transition">
+                Start Application
+              </button>
+            </div>
           </div>
         </section>
-
+        
         <section className="py-20 bg-white">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-16">
@@ -70,17 +89,7 @@ export default function AdmissionsPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 p-4 bg-[var(--school-primary)] rounded-xl text-[var(--school-cream)]">
-                  <div className="font-bold mb-1">
-                    Questions? Contact the School Administrator
-                  </div>
-                  <div className="text-sm opacity-80">
-                    📞 {schoolInfo.phone}
-                  </div>
-                  <div className="text-sm opacity-80">
-                    ✉️ {schoolInfo.email}
-                  </div>
-                </div>
+            
               </div>
 
               {/* Full Enrolment Form */}
@@ -88,7 +97,11 @@ export default function AdmissionsPage() {
                 <h2 className="font-amiri text-2xl font-bold text-[var(--school-primary)] mb-6">
                   Enrolment Application Form
                 </h2>
-                <form action="https://formspree.io/f/mdapylrr" method="POST"  className="space-y-5">
+                <form
+                  action="https://formspree.io/f/mdapylrr"
+                  method="POST"
+                  className="space-y-5"
+                >
                   <div>
                     <label className="text-xs font-bold text-[var(--school-text-muted)] uppercase tracking-wider block mb-1.5">
                       Parent / Guardian Full Name *

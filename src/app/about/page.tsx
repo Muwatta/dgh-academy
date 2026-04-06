@@ -25,7 +25,7 @@ export default function AboutPage() {
           <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 bg-[url('/patterns/islamic-geometry.svg')] bg-cover bg-no-repeat" />
 
           <div className="relative container">
-            <div className="inline-block px-4 py-1 rounded-full text-sm font-medium tracking-wide bg-[var(--school-accent)]/20 text-[var(--school-accent)]">
+            <div className="inline-block px-4 py-1 rounded-full text-sm font-medium tracking-wide bg-[var(--school-accent)]/40 text-[var(--school-cream)] mb-4">
               About the School
             </div>
 

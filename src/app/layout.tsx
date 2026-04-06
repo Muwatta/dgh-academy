@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Amiri, Nunito_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const amiri = Amiri({
@@ -45,7 +46,9 @@ export const metadata: Metadata = {
     title: "Dr. Gambo Hamza Islamic Academy | DGH Academy Jos",
     description:
       "A distinguished Academy where pupils excel academically, morally and spiritually — Gangare, Jos, Nigeria.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DGH Academy" }],
+    images: [
+      { url: "/og-image.jpg", width: 1200, height: 630, alt: "DGH Academy" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -60,10 +63,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${amiri.variable} ${nunitoSans.variable}`}>
-      <body className="font-nunito antialiased">{children}</body>
+      <body className="font-nunito antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

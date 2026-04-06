@@ -26,3 +26,4 @@ public/*.webp
 public/*.svg
 
 # Also ignore any other assets you don't want to commit
+.vscode/

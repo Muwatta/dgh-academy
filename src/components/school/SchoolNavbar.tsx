@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone, Mail, Sun, Moon } from "lucide-react";
 import { schoolNav, schoolInfo } from "@/data/school";
 
@@ -48,7 +49,6 @@ export default function SchoolNavbar() {
           <span className="font-amiri opacity-80 italic">
             {schoolInfo.motto}
           </span>
-          
         </div>
       </div>
 
@@ -63,14 +63,19 @@ export default function SchoolNavbar() {
         <div className="container flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-full bg-[var(--school-primary)] flex items-center justify-center text-white font-amiri font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
-              DGH
+            <div className="relative w-11 h-11 rounded-full overflow-hidden bg-[var(--school-primary)] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+              <Image
+                src={schoolInfo.logoUrl ?? "/images/logo_dgh.jpg"}
+                alt={schoolInfo.shortName}
+                width={48}
+                height={48}
+                className="object-cover"
+              />
             </div>
             <div>
               <div className="font-amiri font-bold text-[var(--school-primary)] text-base leading-tight">
                 DGH Academy
               </div>
-              
             </div>
           </Link>
 

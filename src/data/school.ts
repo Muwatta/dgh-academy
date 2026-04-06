@@ -1,4 +1,3 @@
-
 import type {
   SchoolInfo,
   HeroContent,
@@ -33,6 +32,7 @@ export const schoolInfo: SchoolInfo = {
   googleMapsUrl: "https://maps.app.goo.gl/WbqF2k7sDrw5i7yw8",
   workingHours: "7:00am – 2:00pm",
   colors: ["#6B3A2A", "#F5ECD7", "#FFFFFF"],
+  logoUrl: "/images/logo_dgh.jpg",
   facebook: "https://www.facebook.com/share/1L9JNy5zyr/",
 };
 

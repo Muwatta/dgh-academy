@@ -24,8 +24,8 @@ export interface SchoolInfo {
   googleMapsUrl: string;
   workingHours: string;
   colors: string[];
+  logoUrl?: string;
   facebook?: string;
-  
 }
 
 export interface StaffMember {

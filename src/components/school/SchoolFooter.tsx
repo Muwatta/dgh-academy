@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import {
   Facebook,
@@ -88,29 +89,33 @@ export default function SchoolFooter() {
         {/* Brand column */}
         <div className="lg:col-span-4 space-y-5">
           <div className="flex items-center gap-3">
-            <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-[var(--school-accent)] to-[var(--school-primary)] flex items-center justify-center shadow-lg shadow-black/30 shrink-0">
-              <span className="font-amiri font-bold text-white text-xl">
-                DGH
-              </span>
-              <div className="absolute inset-0 rounded-full border border-[var(--school-accent)]/40" />
+            <div className="relative w-14 h-14 rounded-full overflow-hidden bg-[var(--school-primary)] shadow-lg shadow-black/25 shrink-0">
+              <Image
+                src={schoolInfo.logoUrl ?? "/images/logo_dgh.jpg"}
+                alt={schoolInfo.shortName}
+                height={56}
+                width={56}
+                className="object-cover"
+              />
+              <div className="absolute inset-0 rounded-full border border-white/10" />
             </div>
             <div>
-              <div className="font-amiri font-bold text-white text-[15px] leading-snug">
+              <div className="font-amiri font-bold text-white text-base leading-snug">
                 {schoolInfo.fullName}
               </div>
-              <div className="text-white text-xs mt-0.5 font-medium">
-                Est. {schoolInfo.established}
+              <div className="text-white/60 text-[13px] mt-0.5 font-medium">
+                {schoolInfo.type} · Est. {schoolInfo.established}
               </div>
             </div>
           </div>
 
-          <p className="text-white/50 text-sm leading-relaxed">
+          <p className="text-white/60 text-sm leading-relaxed max-w-sm">
             A distinguished Academy where pupils excel academically, morally and
             spiritually — rooted in the teachings of Islam, serving the Gangare
-            community, Jos.
+            community in Jos.
           </p>
 
-          <div className="flex gap-2 pt-1">
+          <div className="flex flex-wrap items-center gap-2">
             {socialLinks.map(({ icon, href, label }) => (
               <a
                 key={label}
@@ -118,12 +123,21 @@ export default function SchoolFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-9 h-9 rounded-lg bg-white/[0.07] border border-white/[0.09] flex items-center justify-center text-white/45 hover:bg-[var(--school-accent)] hover:text-white hover:border-[var(--school-accent)] transition-all duration-200"
+                className="w-10 h-10 rounded-xl bg-white/[0.08] border border-white/[0.1] flex items-center justify-center text-white/60 hover:bg-[var(--school-accent)] hover:text-white hover:border-[var(--school-accent)] transition-all duration-200"
               >
                 {icon}
               </a>
             ))}
           </div>
+
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 rounded-full bg-[var(--school-accent)] text-white text-sm font-semibold shadow-lg shadow-[var(--school-accent)]/20 hover:bg-[var(--school-accent)]/95 transition-all"
+          >
+            <Phone size={14} /> Chat on WhatsApp
+          </a>
         </div>
 
         <div className="hidden lg:block lg:col-span-1" />
@@ -262,11 +276,14 @@ export default function SchoolFooter() {
       {/* Bottom bar */}
       <div className="relative border-t border-white/[0.07]">
         <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-white/25 text-center sm:text-left">
-            © {new Date().getFullYear()} Dr. Gambo Hamza Islamic Academy. All
-            rights reserved.
-          </p>
-          <div className="flex items-center gap-3 text-xs text-white/20">
+          <div className="flex items-center gap-3">
+            
+            <p className="text-xs text-white/25">
+              © {new Date().getFullYear()} Dr. Gambo Hamza Islamic Academy. All
+              rights reserved.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-white/20">
             <span>www.dghacademy.com</span>
             <span className="w-1 h-1 rounded-full bg-[var(--school-accent)]/35 shrink-0" />
             <span>www.dghacademy.edu.ng</span>

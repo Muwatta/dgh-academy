@@ -29,6 +29,7 @@ export const madrasaInfo = {
   address: "D12 Sabon Layi, Gangare, Jos, Plateau State, Nigeria",
   phone: "08168369019",
   email: "drgambohamzaislamicacademy@gmail.com",
+  logoUrl: "/images/logo_dgh.jpg",
 };
 
 export const madrasaHero: HeroContent = {

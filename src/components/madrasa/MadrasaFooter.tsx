@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Moon, Clock, GraduationCap } from "lucide-react";
 import { madrasaInfo, madrasaNav } from "@/data/madrasa";
@@ -14,8 +15,14 @@ export default function MadrasaFooter() {
         {/* Brand Section */}
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-full bg-[var(--madrasa-accent)]/10 border border-[var(--madrasa-accent)]/30 flex items-center justify-center font-amiri font-bold text-[var(--madrasa-accent)] text-2xl shadow-sm">
-              م
+            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-[var(--madrasa-accent)]/10 border border-[var(--madrasa-accent)]/30 shadow-sm">
+              <Image
+                src={madrasaInfo.logoUrl ?? "/images/logo_dgh.jpg"}
+                alt={madrasaInfo.shortName}
+                width={48}
+                height={48}
+                className="object-cover"
+              />
             </div>
             <div>
               <div className="font-amiri font-bold text-white text-lg leading-tight">

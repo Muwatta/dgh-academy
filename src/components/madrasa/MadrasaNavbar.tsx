@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Phone, Moon } from "lucide-react";
 import { madrasaNav, madrasaInfo } from "@/data/madrasa";
@@ -25,8 +26,14 @@ export default function MadrasaNavbar() {
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}
         <Link href="/madrasa" className="flex items-center gap-3 group">
-          <div className="w-11 h-11 rounded-full border-2 border-[var(--madrasa-accent)] flex items-center justify-center font-amiri font-bold text-[var(--madrasa-accent)] text-lg group-hover:bg-[var(--madrasa-accent)] group-hover:text-[var(--madrasa-primary-dark)] transition-all">
-            د
+          <div className="relative w-11 h-11 rounded-full overflow-hidden bg-[var(--madrasa-primary)] flex items-center justify-center border-2 border-[var(--madrasa-accent)] shadow-md group-hover:scale-105 transition-transform">
+            <Image
+              src={madrasaInfo.logoUrl ?? "/images/logo_dgh.jpg"}
+              alt={madrasaInfo.shortName}
+              width={44}
+              height={44}
+              className="object-cover"
+            />
           </div>
           <div>
             <div className="font-amiri font-bold text-white text-base leading-tight drop-shadow-sm">

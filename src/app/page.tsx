@@ -53,7 +53,6 @@ const iconMap: Record<string, React.ReactNode> = {
   handshake: <Users size={20} />,
 };
 
-// Hero slides data (using Unsplash but custom loader will handle it)
 const heroSlides = [
   {
     id: 1,
@@ -62,7 +61,7 @@ const heroSlides = [
       "Where knowledge meets faith — nurturing tomorrow's leaders today.",
     ctaText: "Explore Academy",
     ctaLink: "/about",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+    image: "/public/images/enviroment_dgh.jpg",
   },
   {
     id: 2,

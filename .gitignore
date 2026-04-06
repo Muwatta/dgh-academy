@@ -18,3 +18,13 @@ yarn-error.log*
 
 # OS
 .DS_Store
+
+# Ignore all images in public folder (adjust paths as needed)
+public/images/
+public/*.jpg
+public/*.png
+public/*.webp
+public/*.svg
+
+# Also ignore any other assets you don't want to commit
+public/assets/public/images/

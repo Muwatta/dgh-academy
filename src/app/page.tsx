@@ -61,7 +61,8 @@ const heroSlides = [
       "Where knowledge meets faith — nurturing tomorrow's leaders today.",
     ctaText: "Explore Academy",
     ctaLink: "/about",
-    image: "/images/enviroment_dgh.jpg",
+    image:
+      "https://res.cloudinary.com/dee5edoss/image/upload/v1775469629/enviroment_dgh_j4cvvi.jpg",
   },
   {
     id: 2,
@@ -420,7 +421,7 @@ export default function HomePage() {
                 <h3 className="font-amiri text-2xl font-bold text-[var(--school-primary)] mb-6">
                   Make an Enquiry
                 </h3>
-                <form className="space-y-4">
+                <form action="https://formspree.io/f/mdapylrr" method="POST" className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-bold text-[var(--school-text-muted)] uppercase tracking-wider block mb-1.5">

@@ -76,7 +76,7 @@ export default function ContactPage() {
               {/* Message form */}
               <div className="card shadow-xl">
                 <h2 className="font-amiri text-2xl font-bold text-[var(--school-primary)] mb-6">Send Us a Message</h2>
-                <form className="space-y-5">
+                <form action="https://formspree.io/f/mdapylrr" method="POST" className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-bold text-[var(--school-text-muted)] uppercase tracking-wider block mb-1.5">Your Name *</label>

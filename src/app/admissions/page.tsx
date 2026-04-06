@@ -88,7 +88,7 @@ export default function AdmissionsPage() {
                 <h2 className="font-amiri text-2xl font-bold text-[var(--school-primary)] mb-6">
                   Enrolment Application Form
                 </h2>
-                <form className="space-y-5">
+                <form action="https://formspree.io/f/mdapylrr" method="POST"  className="space-y-5">
                   <div>
                     <label className="text-xs font-bold text-[var(--school-text-muted)] uppercase tracking-wider block mb-1.5">
                       Parent / Guardian Full Name *

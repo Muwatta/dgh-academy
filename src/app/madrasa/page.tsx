@@ -366,7 +366,7 @@ export default function MadrasaHomePage() {
               <h3 className="font-amiri text-2xl font-bold text-[var(--madrasa-primary)] mb-6">
                 Register Interest
               </h3>
-              <form className="space-y-4">
+              <form action="https://formspree.io/f/mdapylrr" method="POST" className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1.5">

@@ -55,7 +55,7 @@ export default function MadrasaAdmissionsPage() {
             {/* Form */}
             <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
               <h2 className="font-amiri text-2xl font-bold text-[var(--madrasa-primary)] mb-6">Registration Form</h2>
-              <form className="space-y-5">
+              <form action="https://formspree.io/f/mdapylrr" method="POST" className="space-y-5">
                 <div>
                   <label className="text-xs font-bold text-[var(--madrasa-text-muted)] uppercase tracking-wider block mb-1.5">Parent / Guardian Name *</label>
                   <input type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--madrasa-primary)] transition-colors" />

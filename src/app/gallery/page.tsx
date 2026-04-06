@@ -13,7 +13,7 @@ import Image from "next/image";
 const galleryImages = [
   {
     id: 1,
-    src: "/images/class1_dgh.jpg",
+    src: "https://res.cloudinary.com/dee5edoss/image/upload/v1775469617/class1_dgh_zldh14.jpg",
     alt: "Classroom activity",
     caption: "Active Classroom Learning",
     title: "Interactive Learning",

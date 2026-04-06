@@ -20,7 +20,7 @@ const galleryImages = [
     description:
       "Pupils gather together for morning assembly, Quran recitation and campus announcements.",
     tag: "Community",
-    date: "April 2026",
+    date: "February 2026",
   },
   {
     id: 2,
@@ -31,14 +31,14 @@ const galleryImages = [
     description:
       "Children learn computer skills that prepare them for a technology-driven world.",
     tag: "Tech",
-    date: "April 2026",
+    date: "Feb 2026",
   },
   {
     id: 3,
     src: "/images/coding%20session%20Pictoblox.jpg",
     alt: "Students coding with Pictoblox",
     caption: "Coding Session",
-    title: "Pictoblox Workshop",
+    title: "Pictoblox Class",
     description:
       "A creative technology lesson where pupils build projects and solve problems.",
     tag: "STEM",
@@ -51,7 +51,7 @@ const galleryImages = [
     caption: "Focused Learning",
     title: "Classroom Study",
     description:
-      "Students concentrate deeply on their lessons in a calm, supportive environment.",
+      "First day in DGHI Academy enviroment",
     tag: "Study",
     date: "March 2026",
   },
@@ -62,7 +62,7 @@ const galleryImages = [
     caption: "Active Participation",
     title: "Student Engagement",
     description:
-      "Pupils participate actively and express their understanding during class.",
+      "Excitement as his first day at DGHI Academy begins with a warm welcome and new friendships.",
     tag: "Engagement",
     date: "March 2026",
   },
@@ -75,7 +75,7 @@ const galleryImages = [
     description:
       "Young learners gain confidence through speaking, reading and leadership opportunities.",
     tag: "Character",
-    date: "April 2026",
+    date: "Feb 2026",
   },
   {
     id: 7,
@@ -86,7 +86,7 @@ const galleryImages = [
     description:
       "Pupils arrive happily on campus, ready to begin the day with purpose and energy.",
     tag: "Welcome",
-    date: "April 2026",
+    date: "Feb 2026",
   },
   {
     id: 8,
@@ -97,7 +97,7 @@ const galleryImages = [
     description:
       "Students enjoy friendly moments while moving between lessons and activities.",
     tag: "Life",
-    date: "April 2026",
+    date: "Feb 2026",
   },
   {
     id: 9,
@@ -108,7 +108,7 @@ const galleryImages = [
     description:
       "Recess activities help students grow physically and socially in a caring setting.",
     tag: "Wellbeing",
-    date: "April 2026",
+    date: "Feb 2026",
   },
   {
     id: 10,
@@ -141,7 +141,7 @@ const galleryImages = [
     description:
       "Our teachers strengthen their skills through regular professional development sessions.",
     tag: "Growth",
-    date: "February 2026",
+    date: "September 2026",
   },
   {
     id: 13,
@@ -200,17 +200,6 @@ const galleryImages = [
   },
   {
     id: 18,
-    src: "/images/f_uniform_dgh.jpg",
-    alt: "Female students in uniform",
-    caption: "Uniform Pride",
-    title: "Uniform Day",
-    description:
-      "Students wear their uniforms with pride as part of our academy’s identity and discipline.",
-    tag: "Culture",
-    date: "January 2026",
-  },
-  {
-    id: 19,
     src: "/images/founder_dgh.jpg",
     alt: "Founder portrait",
     caption: "Founder Tribute",
@@ -221,7 +210,7 @@ const galleryImages = [
     date: "January 2026",
   },
   {
-    id: 20,
+    id: 19,
     src: "/images/formal%20opening.jpg",
     alt: "Formal opening event",
     caption: "Opening Ceremony",
@@ -229,10 +218,10 @@ const galleryImages = [
     description:
       "A special event marking the formal opening of our academy and celebration with families.",
     tag: "Community",
-    date: "January 2026",
+    date: "August 2026",
   },
   {
-    id: 21,
+    id: 20,
     src: "/images/enviroment_dgh.jpg",
     alt: "School grounds",
     caption: "Campus Grounds",
@@ -243,7 +232,7 @@ const galleryImages = [
     date: "February 2026",
   },
   {
-    id: 22,
+    id: 21,
     src: "/images/enviroment1_dgh.jpg",
     alt: "Students learning outside",
     caption: "Outdoor Campus",
@@ -254,7 +243,7 @@ const galleryImages = [
     date: "March 2026",
   },
   {
-    id: 23,
+    id: 22,
     src: "/images/class1_dgh.jpg",
     alt: "Students learning in class",
     caption: "Classroom Focus",
@@ -265,7 +254,7 @@ const galleryImages = [
     date: "March 2026",
   },
   {
-    id: 24,
+    id: 23,
     src: "/images/uniform_dgh.jpg",
     alt: "Students in uniform",
     caption: "School Spirit",

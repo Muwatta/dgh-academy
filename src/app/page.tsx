@@ -61,7 +61,7 @@ const heroSlides = [
       "Where knowledge meets faith — nurturing tomorrow's leaders today.",
     ctaText: "Explore Academy",
     ctaLink: "/about",
-    image: "/public/images/enviroment_dgh.jpg",
+    image: "/images/enviroment_dgh.jpg",
   },
   {
     id: 2,

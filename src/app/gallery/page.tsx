@@ -5,7 +5,7 @@ import SchoolFooter from "@/components/school/SchoolFooter";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Photos of DGH Academy — classrooms, students, events and school life.",
+    "Photos of DGHI Academy — classrooms, students, events and school life.",
 };
 
 import Image from "next/image";
@@ -13,62 +13,265 @@ import Image from "next/image";
 const galleryImages = [
   {
     id: 1,
-    src: "https://res.cloudinary.com/dee5edoss/image/upload/v1775469617/class1_dgh_zldh14.jpg",
-    alt: "Classroom activity",
-    caption: "Active Classroom Learning",
-    title: "Interactive Learning",
-    description: "Kids engage in group work with dedicated teachers.",
-    tag: "Classroom",
-    date: "March 2026",
+    src: "/images/overview%20of%20madrasa%20students.jpg",
+    alt: "Overview of madrasa students",
+    caption: "Daily Assembly",
+    title: "School Community",
+    description:
+      "Pupils gather together for morning assembly, Quran recitation and campus announcements.",
+    tag: "Community",
+    date: "April 2026",
   },
   {
     id: 2,
-    src: "/images/library_dgh.jpg",
-    alt: "School library",
-    caption: "Library Time",
-    title: "Books & Curiosity",
-    description: "A quiet library corner for reading and research.",
-    tag: "Library",
-    date: "February 2026",
+    src: "/images/during%20ICT%20class.jpg",
+    alt: "Students during ICT class",
+    caption: "Digital Learning",
+    title: "ICT Class",
+    description:
+      "Children learn computer skills that prepare them for a technology-driven world.",
+    tag: "Tech",
+    date: "April 2026",
   },
   {
     id: 3,
-    src: "/images/uniform_dgh.jpg",
-    alt: "Students in uniform",
-    caption: "Students in Uniform",
+    src: "/images/coding%20session%20Pictoblox.jpg",
+    alt: "Students coding with Pictoblox",
+    caption: "Coding Session",
+    title: "Pictoblox Workshop",
+    description:
+      "A creative technology lesson where pupils build projects and solve problems.",
+    tag: "STEM",
+    date: "March 2026",
   },
   {
     id: 4,
-    src: "/images/playground_dgh.jpg",
-    alt: "Playground and recreation",
-    caption: "Playground & Recreation",
+    src: "/images/a%20madrasa%20student.jpg",
+    alt: "A madrasa student studying",
+    caption: "Focused Learning",
+    title: "Classroom Study",
+    description:
+      "Students concentrate deeply on their lessons in a calm, supportive environment.",
+    tag: "Study",
+    date: "March 2026",
   },
   {
     id: 5,
-    src: "/images/enviroment_dgh.jpg",
-    alt: "School grounds",
-    caption: "School Grounds",
+    src: "/images/another%20madrasa%20student%20standing.jpg",
+    alt: "Madrasa student standing in the classroom",
+    caption: "Active Participation",
+    title: "Student Engagement",
+    description:
+      "Pupils participate actively and express their understanding during class.",
+    tag: "Engagement",
+    date: "March 2026",
   },
   {
     id: 6,
-    src: "/images/founder_dgh.jpg",
-    alt: "Founder portrait",
-    caption: "Our Founder",
+    src: "/images/a%20female%20pupil%20standing.jpg",
+    alt: "Female pupil standing with confidence",
+    caption: "Inspired Learner",
+    title: "Student Confidence",
+    description:
+      "Young learners gain confidence through speaking, reading and leadership opportunities.",
+    tag: "Character",
+    date: "April 2026",
   },
   {
     id: 7,
-    src: "/images/enviroment1_dgh.jpg",
-    alt: "Students learning outside",
-    caption: "Outdoor Learning",
+    src: "/images/a%20female%20pupil%20on%20the%20staircase.jpg",
+    alt: "Female pupil on the staircase",
+    caption: "Campus Welcome",
+    title: "School Arrival",
+    description:
+      "Pupils arrive happily on campus, ready to begin the day with purpose and energy.",
+    tag: "Welcome",
+    date: "April 2026",
   },
   {
     id: 8,
-    src: "/images/f_uniform_dgh.jpg",
-    alt: "Uniform selection",
-    caption: "Uniform Day",
-    title: "School Pride",
+    src: "/images/pupils%20smilng%20on%20the%20walkway.jpg",
+    alt: "Pupils smiling on the walkway",
+    caption: "Happy Walkway",
+    title: "Campus Life",
     description:
-      "Students proudly wearing academy uniform during morning assembly.",
+      "Students enjoy friendly moments while moving between lessons and activities.",
+    tag: "Life",
+    date: "April 2026",
+  },
+  {
+    id: 9,
+    src: "/images/pupils%20playing%20during%20game%20session.jpg",
+    alt: "Pupils playing during a game session",
+    caption: "Playtime",
+    title: "Recess & Teamwork",
+    description:
+      "Recess activities help students grow physically and socially in a caring setting.",
+    tag: "Wellbeing",
+    date: "April 2026",
+  },
+  {
+    id: 10,
+    src: "/images/toddlers%20playing%20with%20swing.jpg",
+    alt: "Toddlers playing with a swing",
+    caption: "Early Play",
+    title: "Foundation Play",
+    description:
+      "Young learners enjoy playful movement that builds coordination and confidence.",
+    tag: "Early Years",
+    date: "March 2026",
+  },
+  {
+    id: 11,
+    src: "/images/toddlers%20in%20their%20class.jpg",
+    alt: "Toddlers learning in their class",
+    caption: "Tiny Classrooms",
+    title: "Early Learning",
+    description:
+      "Our early years programme supports young children with gentle, age-appropriate lessons.",
+    tag: "Foundation",
+    date: "March 2026",
+  },
+  {
+    id: 12,
+    src: "/images/some%20staff%20training%20session.jpg",
+    alt: "Staff training session",
+    caption: "Teacher Growth",
+    title: "Staff Development",
+    description:
+      "Our teachers strengthen their skills through regular professional development sessions.",
+    tag: "Growth",
+    date: "February 2026",
+  },
+  {
+    id: 13,
+    src: "/images/school%20wall%20with%20school%20name.jpg",
+    alt: "School wall with the school name",
+    caption: "School Identity",
+    title: "Campus Entrance",
+    description:
+      "The school entrance proudly displays our academy name and commitment to excellence.",
+    tag: "Campus",
+    date: "February 2026",
+  },
+  {
+    id: 14,
+    src: "/images/playground_dgh.jpg",
+    alt: "Outdoor school activity",
+    caption: "Playground Fun",
+    title: "Outdoor Recreation",
+    description:
+      "Our playground provides a safe place for children to play, learn and grow together.",
+    tag: "Wellbeing",
+    date: "March 2026",
+  },
+  {
+    id: 15,
+    src: "/images/logo_dgh.jpg",
+    alt: "School logo",
+    caption: "Our Emblem",
+    title: "School Logo",
+    description:
+      "The DGHI Academy logo represents our vision of faith, learning and community service.",
+    tag: "Identity",
+    date: "January 2026",
+  },
+  {
+    id: 16,
+    src: "/images/library_dgh.jpg",
+    alt: "School library",
+    caption: "Library Corner",
+    title: "Books & Research",
+    description:
+      "Students use our library space for reading, research and quiet study time.",
+    tag: "Learning",
+    date: "February 2026",
+  },
+  {
+    id: 17,
+    src: "/images/in%20the%20library%20for%20prep.jpg",
+    alt: "Students preparing in the library",
+    caption: "Study Prep",
+    title: "Library Preparation",
+    description:
+      "Learners take time in the library to prepare assignments, revise and reflect.",
+    tag: "Study",
+    date: "March 2026",
+  },
+  {
+    id: 18,
+    src: "/images/f_uniform_dgh.jpg",
+    alt: "Female students in uniform",
+    caption: "Uniform Pride",
+    title: "Uniform Day",
+    description:
+      "Students wear their uniforms with pride as part of our academy’s identity and discipline.",
+    tag: "Culture",
+    date: "January 2026",
+  },
+  {
+    id: 19,
+    src: "/images/founder_dgh.jpg",
+    alt: "Founder portrait",
+    caption: "Founder Tribute",
+    title: "Our Founder",
+    description:
+      "The founder’s vision inspires everything we do at DGHI Academy.",
+    tag: "Leadership",
+    date: "January 2026",
+  },
+  {
+    id: 20,
+    src: "/images/formal%20opening.jpg",
+    alt: "Formal opening event",
+    caption: "Opening Ceremony",
+    title: "School Launch",
+    description:
+      "A special event marking the formal opening of our academy and celebration with families.",
+    tag: "Community",
+    date: "January 2026",
+  },
+  {
+    id: 21,
+    src: "/images/enviroment_dgh.jpg",
+    alt: "School grounds",
+    caption: "Campus Grounds",
+    title: "Beautiful Grounds",
+    description:
+      "A peaceful campus environment creates the right atmosphere for learning and growth.",
+    tag: "Campus",
+    date: "February 2026",
+  },
+  {
+    id: 22,
+    src: "/images/enviroment1_dgh.jpg",
+    alt: "Students learning outside",
+    caption: "Outdoor Campus",
+    title: "Open-Air Learning",
+    description:
+      "Some lessons extend to the outdoors, bringing nature into the students’ learning experience.",
+    tag: "Experience",
+    date: "March 2026",
+  },
+  {
+    id: 23,
+    src: "/images/class1_dgh.jpg",
+    alt: "Students learning in class",
+    caption: "Classroom Focus",
+    title: "Interactive Class",
+    description:
+      "Teachers guide pupils through engaging group activities and interactive lessons.",
+    tag: "Learning",
+    date: "March 2026",
+  },
+  {
+    id: 24,
+    src: "/images/uniform_dgh.jpg",
+    alt: "Students in uniform",
+    caption: "School Spirit",
+    title: "Uniformed Students",
+    description:
+      "The academy uniform reflects our commitment to unity, discipline and pride.",
     tag: "Culture",
     date: "January 2026",
   },
@@ -101,7 +304,7 @@ export default function GalleryPage() {
             {/* Description */}
             <p className="mt-6 text-base md:text-lg text-[var(--school-cream)]/80 max-w-lg leading-relaxed">
               A glimpse into the daily life, events, and learning environment of
-              DGH Academy.
+              DGHI Academy.
             </p>
           </div>
         </section>

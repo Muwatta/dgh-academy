@@ -39,7 +39,7 @@ export default function MadrasaNavbar() {
           </div>
           <div>
             <div className="font-amiri font-bold text-[var(--madrasa-primary-dark)] text-base leading-tight drop-shadow-sm">
-              DGH Madrasa
+              DGHI Madrasa
             </div>
             <div className="text-xs text-[var(--madrasa-accent)] leading-tight font-medium">
               Evening Islamic School

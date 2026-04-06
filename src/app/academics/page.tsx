@@ -4,12 +4,15 @@ import { ArrowRight, BookOpen, CheckCircle2 } from "lucide-react";
 import SchoolNavbar from "@/components/school/SchoolNavbar";
 import SchoolFooter from "@/components/school/SchoolFooter";
 import {
-  academicPrograms, specialInitiatives, entryClasses
+  academicPrograms,
+  specialInitiatives,
+  entryClasses,
 } from "@/data/school";
 
 export const metadata: Metadata = {
   title: "Academics",
-  description: "Explore DGH Academy's Nigerian & British curriculum — Nursery through Primary with ICT, Islamic Studies and more.",
+  description:
+    "Explore DGHI Academy's Nigerian & British curriculum — Nursery through Primary with ICT, Islamic Education and more.",
 };
 
 export default function AcademicsPage() {
@@ -39,8 +42,8 @@ export default function AcademicsPage() {
             {/* Description */}
             <p className="mt-6 text-base md:text-lg text-[var(--school-cream)]/80 max-w-xl leading-relaxed">
               A rigorous Nigerian and British dual curriculum from Toddler to
-              Basic 4, integrating Islamic studies, ICT, coding, and real world
-              learning strategies.
+              Basic 5, integrating Islamic Education, ICT, coding, and real
+              world learning strategies.
             </p>
           </div>
         </section>
@@ -57,14 +60,14 @@ export default function AcademicsPage() {
                   Nigerian & British Dual Curriculum
                 </h2>
                 <p className="text-[var(--school-text-muted)] leading-relaxed mb-4">
-                  DGH Academy delivers a carefully integrated dual curriculum
+                  DGHI Academy delivers a carefully integrated dual curriculum
                   that meets Nigerian national standards while incorporating the
                   internationally respected British primary framework. This
                   gives our pupils the best of both worlds — local relevance and
                   global competitiveness.
                 </p>
                 <p className="text-[var(--school-text-muted)] leading-relaxed mb-6">
-                  At every level, Islamic Studies is woven into the academic
+                  At every level, Islamic Education is woven into the academic
                   programme, ensuring that intellectual development and moral
                   growth happen together.
                 </p>
@@ -72,7 +75,7 @@ export default function AcademicsPage() {
                   {[
                     "Nigerian National Curriculum",
                     "British Primary Framework",
-                    "Islamic Studies",
+                    "Islamic Education",
                     "ICT & Coding",
                     "Arabic Language",
                     "Physical Education",
@@ -127,6 +130,11 @@ export default function AcademicsPage() {
                     {
                       level: "Basic 4",
                       ages: "Ages 8–9",
+                      desc: "Advanced primary",
+                    },
+                    {
+                      level: "Basic 5",
+                      ages: "Ages 9–10",
                       desc: "Advanced primary",
                     },
                   ].map((item) => (

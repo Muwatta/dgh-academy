@@ -7,7 +7,7 @@ import { admissionRequirements, entryClasses, schoolInfo } from "@/data/school";
 export const metadata: Metadata = {
   title: "Admissions",
   description:
-    "Apply for admission to Dr. Gambo Hamza Islamic Academy. Open to Toddler through Basic 4.",
+    "Apply for admission to Dr. Gambo Hamza Islamic Academy. Open to Toddler through Basic 5.",
 };
 
 export default function AdmissionsPage() {
@@ -36,7 +36,7 @@ export default function AdmissionsPage() {
 
             {/* Description */}
             <p className="mt-6 text-base md:text-lg text-[var(--school-cream)]/80 max-w-xl leading-relaxed">
-              We welcome applications for all classes from Toddler to Basic 4.
+              We welcome applications for all classes from Toddler to Basic 5.
               Follow the steps below to secure your child’s place.
             </p>
 
@@ -48,7 +48,7 @@ export default function AdmissionsPage() {
             </div>
           </div>
         </section>
-        
+
         <section className="py-20 bg-white">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-16">
@@ -88,8 +88,6 @@ export default function AdmissionsPage() {
                     ))}
                   </div>
                 </div>
-
-            
               </div>
 
               {/* Full Enrolment Form */}
@@ -108,6 +106,7 @@ export default function AdmissionsPage() {
                     </label>
                     <input
                       type="text"
+                      name="guardianName"
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                     />
@@ -119,6 +118,7 @@ export default function AdmissionsPage() {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         required
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                       />
@@ -129,6 +129,7 @@ export default function AdmissionsPage() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                       />
                     </div>
@@ -140,6 +141,7 @@ export default function AdmissionsPage() {
                       </label>
                       <input
                         type="text"
+                        name="childName"
                         required
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                       />
@@ -150,6 +152,7 @@ export default function AdmissionsPage() {
                       </label>
                       <input
                         type="date"
+                        name="childDob"
                         required
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                       />
@@ -161,12 +164,13 @@ export default function AdmissionsPage() {
                         Gender *
                       </label>
                       <select
+                        name="gender"
                         required
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] bg-white transition-colors"
                       >
                         <option value="">Select</option>
-                        <option>Male</option>
-                        <option>Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                       </select>
                     </div>
                     <div>
@@ -174,12 +178,15 @@ export default function AdmissionsPage() {
                         Class Applying For *
                       </label>
                       <select
+                        name="classApplying"
                         required
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] bg-white transition-colors"
                       >
                         <option value="">Select class</option>
                         {entryClasses.map((c) => (
-                          <option key={c}>{c}</option>
+                          <option key={c} value={c}>
+                            {c}
+                          </option>
                         ))}
                       </select>
                     </div>
@@ -190,6 +197,7 @@ export default function AdmissionsPage() {
                     </label>
                     <input
                       type="text"
+                      name="previousSchool"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                     />
                   </div>
@@ -198,6 +206,7 @@ export default function AdmissionsPage() {
                       Additional Information
                     </label>
                     <textarea
+                      name="additionalInfo"
                       rows={3}
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] resize-none transition-colors"
                     />

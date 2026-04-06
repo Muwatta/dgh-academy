@@ -148,13 +148,7 @@ export default function MadrasaFooter() {
             © {new Date().getFullYear()} {madrasaInfo.fullName} · Part of Dr.
             Gambo Hamza Islamic Academy
           </div>
-          <div className="flex gap-4">
-            <span>
-              {madrasaInfo.hours} · {madrasaInfo.days}
-            </span>
-            <span className="hidden md:inline">|</span>
-            <span>Est. {madrasaInfo.established}</span>
-          </div>
+          
         </div>
       </div>
     </footer>

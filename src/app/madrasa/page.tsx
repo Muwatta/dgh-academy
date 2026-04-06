@@ -30,7 +30,7 @@ export default function MadrasaHomePage() {
   return (
     <>
       {/* HERO – with improved overlay for text readability */}
-      <section className="relative min-h-[90vh] madrasa-gradient pattern-geometric flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] madrasa-gradient pattern-geometric flex items-start sm:items-center overflow-hidden pt-24 sm:pt-0">
         {/* Dark overlay to ensure text is readable */}
         <div className="absolute inset-0 bg-black/30 md:bg-black/20 z-0"></div>
 
@@ -45,7 +45,7 @@ export default function MadrasaHomePage() {
         <div className="container relative z-10 py-24">
           <div className="max-w-2xl">
             <div className="font-amiri text-[var(--madrasa-accent)] text-6xl mb-4 animate-fade-up drop-shadow-sm">
-             أكاديمية د. حمزة غمبو
+              أكاديمية د. حمزة غمبو
             </div>
             <div className="inline-flex items-center gap-2 bg-[var(--madrasa-accent)]/20 backdrop-blur-sm border border-[var(--madrasa-accent)]/40 text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 animate-fade-up delay-100">
               <Moon size={12} /> {madrasaHero.badge}
@@ -366,7 +366,11 @@ export default function MadrasaHomePage() {
               <h3 className="font-amiri text-2xl font-bold text-[var(--madrasa-primary)] mb-6">
                 Register Interest
               </h3>
-              <form action="https://formspree.io/f/mdapylrr" method="POST" className="space-y-4">
+              <form
+                action="https://formspree.io/f/mdapylrr"
+                method="POST"
+                className="space-y-4"
+              >
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1.5">
@@ -374,6 +378,7 @@ export default function MadrasaHomePage() {
                     </label>
                     <input
                       type="text"
+                      name="guardianName"
                       placeholder="Full name"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-[var(--madrasa-primary)] transition-colors"
                     />
@@ -384,6 +389,7 @@ export default function MadrasaHomePage() {
                     </label>
                     <input
                       type="tel"
+                      name="phone"
                       placeholder="08XXXXXXXXX"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-[var(--madrasa-primary)] transition-colors"
                     />
@@ -395,6 +401,7 @@ export default function MadrasaHomePage() {
                   </label>
                   <input
                     type="text"
+                    name="childName"
                     placeholder="Child's full name"
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-[var(--madrasa-primary)] transition-colors"
                   />
@@ -406,6 +413,7 @@ export default function MadrasaHomePage() {
                     </label>
                     <input
                       type="text"
+                      name="childAge"
                       placeholder="e.g. 7 years"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-[var(--madrasa-primary)] transition-colors"
                     />
@@ -414,7 +422,10 @@ export default function MadrasaHomePage() {
                     <label className="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1.5">
                       Class Level *
                     </label>
-                    <select className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-[var(--madrasa-primary)] bg-white transition-colors">
+                    <select
+                      name="classLevel"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-[var(--madrasa-primary)] bg-white transition-colors"
+                    >
                       <option value="">Select level</option>
                       {madrasaClasses.map((c) => (
                         <option key={c} value={c}>
@@ -429,6 +440,7 @@ export default function MadrasaHomePage() {
                     Message (Optional)
                   </label>
                   <textarea
+                    name="message"
                     rows={3}
                     placeholder="Any questions..."
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-[var(--madrasa-primary)] resize-none transition-colors"

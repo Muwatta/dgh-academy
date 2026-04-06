@@ -10,7 +10,6 @@ import type {
 } from "@/lib/types";
 
 export const schoolNav: NavLink[] = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Academics", href: "/academics" },
   { label: "Admissions", href: "/admissions" },
@@ -21,7 +20,7 @@ export const schoolNav: NavLink[] = [
 
 export const schoolInfo: SchoolInfo = {
   fullName: "Dr. Gambo Hamza Islamic Academy",
-  shortName: "DGH Academy",
+  shortName: "DGHI Academy",
   motto: "",
   established: 2025,
   type: "Nursery & Primary",
@@ -137,12 +136,12 @@ export const academicPrograms: Program[] = [
   {
     title: "Primary (Basic 1–4)",
     description:
-      "A rigorous, well-rounded academic programme integrating Islamic studies, ICT, and real-world learning strategies.",
+      "A rigorous, well-rounded academic programme integrating Islamic education, ICT, and real-world learning strategies.",
     icon: "book",
-    levels: ["Basic 1", "Basic 2", "Basic 3", "Basic 4"],
+    levels: ["Basic 1", "Basic 2", "Basic 3", "Basic 4", "Basic 5"],
   },
   {
-    title: "Islamic Studies",
+    title: "Islamic Education",
     description:
       "Dedicated Quran, Hadith, and Islamic moral education woven into daily school life.",
     icon: "moon",
@@ -188,6 +187,7 @@ export const entryClasses = [
   "Basic 2",
   "Basic 3",
   "Basic 4",
+  "Basic 5",
 ];
 
 export const specialInitiatives = [

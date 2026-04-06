@@ -1,47 +1,58 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Clock, Moon } from "lucide-react";
+import { madrasaTimetable } from "@/data/madrasa";
 
 export const metadata: Metadata = {
-  title: "Timetable | DGH Madrasa",
+  title: "Timetable | DGHI Madrasa",
   description:
-    "DGH Madrasa daily timetable — evening sessions from 3:00pm to 5:00pm, Monday–Friday.",
+    "DGHI Madrasa daily timetable — evening sessions from 2:00pm to 6:00pm, Thursday–Sunday.",
 };
 
-// Hardcoded timetable to ensure consistency with 3pm–5pm session
-const madrasaTimetable = [
-  { time: "3:00 PM – 3:15 PM", activity: "Opening Du'as & Revision" },
-  {
-    time: "3:15 PM – 3:45 PM",
-    activity: "Quran Recitation (Tajweed & Tilawah)",
-  },
-  { time: "3:45 PM – 4:15 PM", activity: "Hifz / Memorisation (New Lesson)" },
-  { time: "4:15 PM – 4:30 PM", activity: "Islamic Studies / Seerah" },
-  {
-    time: "4:30 PM – 4:50 PM",
-    activity: "Arabic Language (Reading & Writing)",
-  },
-  { time: "4:50 PM – 5:00 PM", activity: "Review & Closing Du'as" },
-];
-
-const sessionHours = "3:00pm – 5:00pm";
-const sessionDays = "Monday – Friday";
+const sessionHours = "2:00pm – 6:00pm";
+const sessionDays = "Thursday – Sunday";
 
 export default function MadrasaTimetablePage() {
   return (
     <>
       {/* Hero */}
-      <section className="madrasa-gradient pattern-geometric py-20">
-        <div className="container">
-          <div className="section-tag bg-[var(--madrasa-accent)]/20 text-[var(--madrasa-accent)]">
+      <section className="relative madrasa-gradient pattern-geometric py-24 overflow-hidden">
+        {/* proper contrast layer */}
+        <div className="absolute inset-0 bg-black/30"></div>
+
+        <div className="container relative z-10">
+          {/* Tag */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--madrasa-accent)]/10 text-[var(--madrasa-accent)] text-sm font-medium tracking-wide">
+            <span className="w-2 h-2 rounded-full bg-[var(--madrasa-accent)]"></span>
             Schedule
           </div>
-          <h1 className="font-amiri text-5xl font-bold text-white mt-2 mb-4 drop-shadow-md">
+
+          {/* Heading */}
+          <h1 className="font-amiri text-4xl md:text-5xl font-semibold text-[var(--madrasa-ivory)] mt-6 leading-tight max-w-2xl">
             Daily Timetable
           </h1>
-          <p className="text-papayawhip/80 max-w-md text-sm drop-shadow-sm">
-            Our structured evening session runs {sessionHours}, {sessionDays}.
+
+          {/* Accent line */}
+          <div className="w-14 h-[2px] bg-[var(--madrasa-accent)] mt-4"></div>
+
+          {/* Description */}
+          <p className="mt-6 text-base md:text-lg text-[var(--madrasa-ivory)]/80 max-w-lg leading-relaxed">
+            Our structured evening sessions run{" "}
+            <span className="font-medium text-[var(--madrasa-ivory)]">
+              {sessionHours}
+            </span>
+            , {sessionDays}.
           </p>
+
+          {/* Optional quick info chips */}
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <span className="px-3 py-1 rounded-full bg-white/10 text-[var(--madrasa-ivory)]">
+              Evening Classes
+            </span>
+            <span className="px-3 py-1 rounded-full bg-white/10 text-[var(--madrasa-ivory)]">
+              Structured Learning
+            </span>
+          </div>
         </div>
       </section>
 

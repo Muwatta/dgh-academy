@@ -68,19 +68,19 @@ const heroSlides = [
     id: 2,
     title: "Excellence in Education & Islamic Values",
     subtitle:
-      "British & Nigerian curricula integrated with robust Islamic studies and ICT.",
+      "British & Nigerian curricula integrated with robust Islamic Education and ICT.",
     ctaText: "Academic Programs",
     ctaLink: "/academics",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754",
+    image: "/images/in the library for prep.jpg",
   },
   {
     id: 3,
-    title: "Enrol for 2025/2026 Session",
+    title: "Enrol for 2026/2027 Session",
     subtitle:
       "Limited seats available for Nursery & Primary levels. Join our learning community.",
     ctaText: "Admissions",
     ctaLink: "/admissions",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7",
+    image: "/images/during ICT class.jpg",
   },
 ];
 
@@ -232,7 +232,7 @@ export default function HomePage() {
                     "Nigerian & British Curriculum",
                     "Small Class Sizes",
                     "ICT & Coding",
-                    "Islamic Studies",
+                    "Islamic Education",
                   ].map((tag) => (
                     <span
                       key={tag}
@@ -319,7 +319,7 @@ export default function HomePage() {
                 Academic Programmes
               </h2>
               <p className="text-[var(--school-text-muted)] max-w-xl mx-auto">
-                From Toddler to Basic 4, our programmes blend academic rigour
+                From Toddler to Basic 5, our programmes blend academic rigour
                 with strong Islamic foundations.
               </p>
             </div>
@@ -433,6 +433,7 @@ export default function HomePage() {
                       </label>
                       <input
                         type="text"
+                        name="parentName"
                         placeholder="Your full name"
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                       />
@@ -443,6 +444,7 @@ export default function HomePage() {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         placeholder="08XXXXXXXXX"
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                       />
@@ -454,6 +456,7 @@ export default function HomePage() {
                     </label>
                     <input
                       type="text"
+                      name="childName"
                       placeholder="Child's full name"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                     />
@@ -465,6 +468,7 @@ export default function HomePage() {
                       </label>
                       <input
                         type="text"
+                        name="childAge"
                         placeholder="e.g. 5 years"
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                       />
@@ -473,7 +477,10 @@ export default function HomePage() {
                       <label className="text-xs font-bold text-[var(--school-text-muted)] uppercase tracking-wider block mb-1.5">
                         Class Interested In *
                       </label>
-                      <select className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors bg-white">
+                      <select
+                        name="classInterested"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors bg-white"
+                      >
                         <option value="">Select class</option>
                         {entryClasses.map((c) => (
                           <option key={c} value={c}>
@@ -488,6 +495,7 @@ export default function HomePage() {
                       Message (Optional)
                     </label>
                     <textarea
+                      name="message"
                       rows={3}
                       placeholder="Any questions or additional info..."
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors resize-none"

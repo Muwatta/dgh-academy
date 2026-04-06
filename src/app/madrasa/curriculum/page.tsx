@@ -1,29 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Clock, Moon } from "lucide-react";
-import { madrasaPrograms } from "@/data/madrasa";
+import { madrasaPrograms, madrasaTimetable } from "@/data/madrasa";
 
 export const metadata: Metadata = {
-  title: "Curriculum | DGH Madrasa",
+  title: "Curriculum | DGHI Madrasa",
   description:
-    "Explore the DGH Madrasa curriculum — Quran recitation, Hifz, Arabic language and Islamic studies in Jos (3pm–5pm daily).",
+    "Explore the DGHI Madrasa curriculum — Quran recitation, Hifz, Arabic language and Islamic education in Jos (2pm–6pm daily).",
 };
 
-// Hardcoded timetable to ensure 3pm–5pm consistency
-const madrasaTimetable = [
-  { time: "3:00 PM – 3:15 PM", activity: "Opening Du'as & Revision" },
-  {
-    time: "3:15 PM – 3:45 PM",
-    activity: "Quran Recitation (Tajweed & Tilawah)",
-  },
-  { time: "3:45 PM – 4:15 PM", activity: "Hifz / Memorisation (New Lesson)" },
-  { time: "4:15 PM – 4:30 PM", activity: "Islamic Studies / Seerah" },
-  {
-    time: "4:30 PM – 4:50 PM",
-    activity: "Arabic Language (Reading & Writing)",
-  },
-  { time: "4:50 PM – 5:00 PM", activity: "Review & Closing Du'as" },
-];
+// Shared madrasa timetable supports the 2:00pm–6:00pm programme.
 
 export default function MadrasaCurriculumPage() {
   return (
@@ -103,7 +89,7 @@ export default function MadrasaCurriculumPage() {
         </div>
       </section>
 
-      {/* Daily Timetable - consistent with 3pm–5pm */}
+      {/* Daily Timetable - consistent with 2pm–6pm */}
       <section className="py-20 bg-[var(--madrasa-primary)] pattern-geometric">
         <div className="container max-w-3xl">
           <div className="text-center mb-12">
@@ -111,9 +97,9 @@ export default function MadrasaCurriculumPage() {
               Daily Schedule
             </div>
             <h2 className="font-amiri text-4xl font-bold text-white">
-              Daily Timetable (3:00pm – 5:00pm)
+              Daily Timetable (2:00pm – 6:00pm)
             </h2>
-            <p className="text-white/60 text-sm mt-2">Monday – Friday</p>
+            <p className="text-white/60 text-sm mt-2">Thursday – Sunday</p>
           </div>
 
           <div className="space-y-3">
@@ -139,7 +125,7 @@ export default function MadrasaCurriculumPage() {
           </div>
 
           <p className="text-center text-white/40 text-xs mt-8">
-            * Timetable is structured to maximise learning within the 3pm–5pm
+            * Timetable is structured to maximise learning within the 2pm–6pm
             session.
           </p>
         </div>
@@ -206,7 +192,7 @@ export default function MadrasaCurriculumPage() {
             Ready to Begin the Journey?
           </h2>
           <p className="text-gray-600 mb-8 max-w-md mx-auto text-sm">
-            Enrol your child in the DGH Madrasa and give them the gift of the
+            Enrol your child in the DGHI Madrasa and give them the gift of the
             Quran.
           </p>
           <Link href="/madrasa/admissions" className="btn-primary btn-madrasa">

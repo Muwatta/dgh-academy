@@ -6,7 +6,8 @@ import { schoolInfo } from "@/data/school";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Dr. Gambo Hamza Islamic Academy. Call, email or visit us in Gangare, Jos.",
+  description:
+    "Get in touch with Dr. Gambo Hamza Islamic Academy. Call, email or visit us in Gangare, Jos.",
 };
 
 export default function ContactPage() {
@@ -134,7 +135,7 @@ export default function ContactPage() {
                           Facebook
                         </div>
                         <div className="text-blue-700 font-semibold">
-                          Follow DGH Academy on Facebook
+                          Follow DGHI Academy on Facebook
                         </div>
                       </div>
                     </a>
@@ -177,6 +178,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         required
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                       />
@@ -187,6 +189,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         required
                         className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
                       />
@@ -198,6 +201,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="subject"
                       required
                       placeholder="e.g. Admission Enquiry"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] transition-colors"
@@ -208,6 +212,7 @@ export default function ContactPage() {
                       Message *
                     </label>
                     <textarea
+                      name="message"
                       rows={6}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-[var(--school-primary)] resize-none transition-colors"

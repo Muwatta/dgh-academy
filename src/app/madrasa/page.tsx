@@ -44,8 +44,13 @@ export default function MadrasaHomePage() {
 
         <div className="container relative z-10 py-24">
           <div className="max-w-2xl">
-            <div className="font-amiri text-[var(--madrasa-accent)] text-6xl mb-4 animate-fade-up drop-shadow-sm">
-              أكاديمية د. حمزة غمبو
+            <div
+              dir="rtl"
+              className="font-amiri text-5xl md:text-6xl text-right mb-4 animate-fade-up"
+            >
+              <span className="text-[var(--madrasa-ivory)] drop-shadow-md">
+                أكاديمية د. حمزة غمبو
+              </span>
             </div>
             <div className="inline-flex items-center gap-2 bg-[var(--madrasa-accent)]/20 backdrop-blur-sm border border-[var(--madrasa-accent)]/40 text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 animate-fade-up delay-100">
               <Moon size={12} /> {madrasaHero.badge}

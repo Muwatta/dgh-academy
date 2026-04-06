@@ -134,7 +134,7 @@ export const academicPrograms: Program[] = [
     levels: ["Nursery 1", "Nursery 2"],
   },
   {
-    title: "Primary (Basic 1–4)",
+    title: "Primary (Basic 1–5)",
     description:
       "A rigorous, well-rounded academic programme integrating Islamic education, ICT, and real-world learning strategies.",
     icon: "book",

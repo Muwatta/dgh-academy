@@ -17,9 +17,9 @@ export default function MadrasaAboutPage() {
         <div className="container">
           <div className="font-amiri text-[var(--madrasa-accent)] text-xl mb-3">بسم الله الرحمن الرحيم</div>
           <div className="section-tag bg-[var(--madrasa-accent)]/15 text-[var(--madrasa-accent)]">About the Madrasa</div>
-          <h1 className="font-amiri text-5xl font-bold text-[var(--madrasa-ivory)] mt-2 mb-4">Our Story & Purpose</h1>
+          <h1 className="font-amiri text-5xl font-bold text-papayawhip mt-2 mb-4">Our Story & Purpose</h1>
           <p className="text-[var(--madrasa-ivory)]/60 max-w-xl text-sm">
-            The DGH Madrasa — an evening Islamic school rooted in the same vision as the main Academy, dedicated entirely to Quranic and Islamic education.
+            The DGH Madrasa — an afternoon and weekend Islamic school rooted in the same vision as the main Academy, dedicated entirely to Quranic and Islamic education.
           </p>
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function MadrasaAboutPage() {
           </div>
           <div className="rounded-2xl border-t-4 border-[var(--madrasa-accent)] bg-[var(--madrasa-primary)] p-6 shadow-sm">
             <div className="section-tag bg-[var(--madrasa-accent)]/15 text-[var(--madrasa-accent)] text-xs">Mission</div>
-            <p className="text-[var(--madrasa-ivory)]/70 text-sm leading-relaxed">{madrasaMission}</p>
+            <p className="text-white/70 text-sm leading-relaxed">{madrasaMission}</p>
           </div>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function MadrasaAboutPage() {
             {madrasaValues.map((v) => (
               <div key={v.title} className="rounded-xl bg-white/8 border border-white/10 p-6">
                 <h3 className="font-bold text-[var(--madrasa-accent)] font-amiri mb-2">{v.title}</h3>
-                <p className="text-[var(--madrasa-ivory)]/60 text-sm leading-relaxed">{v.description}</p>
+                <p className="text-white/60 text-sm leading-relaxed">{v.description}</p>
               </div>
             ))}
           </div>

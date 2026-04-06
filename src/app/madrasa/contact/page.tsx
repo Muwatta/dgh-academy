@@ -15,7 +15,7 @@ export default function MadrasaContactPage() {
           <div className="section-tag bg-[var(--madrasa-accent)]/15 text-[var(--madrasa-accent)]">
             Reach Us
           </div>
-          <h1 className="font-amiri text-5xl font-bold text-[var(--madrasa-ivory)] mt-2 mb-4">
+          <h1 className="font-amiri text-5xl font-bold text-dark mt-2 mb-4">
             Contact the Madrasa
           </h1>
           <p className="text-[var(--madrasa-ivory)]/60 max-w-xl text-sm">
@@ -29,7 +29,7 @@ export default function MadrasaContactPage() {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Info */}
             <div>
-              <h2 className="font-amiri text-3xl font-bold text-[var(--madrasa-primary)] mb-8">
+              <h2 className="font-amiri text-3xl font-bold text-papayawhip mb-8">
                 Contact Details
               </h2>
               <div className="space-y-4">

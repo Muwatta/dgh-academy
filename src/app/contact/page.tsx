@@ -17,7 +17,7 @@ export default function ContactPage() {
         <section className="school-gradient pattern-islamic py-20">
           <div className="container">
             <div className="section-tag bg-[var(--school-accent)]/15 text-[var(--school-accent)]">Get in Touch</div>
-            <h1 className="font-amiri text-5xl font-bold text-white mt-2 mb-4">Contact Us</h1>
+            <h1 className="font-amiri text-5xl font-bold text-papayawhip mt-2 mb-4">Contact Us</h1>
             <p className="text-[var(--school-cream)]/70 max-w-xl">
               We are happy to answer your questions and welcome you to visit the school. Reach us through any of the channels below.
             </p>

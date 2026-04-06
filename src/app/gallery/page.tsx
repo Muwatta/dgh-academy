@@ -84,7 +84,7 @@ export default function GalleryPage() {
             <div className="section-tag bg-[var(--school-accent)]/15 text-[var(--school-accent)]">
               Our School Life
             </div>
-            <h1 className="font-amiri text-5xl font-bold text-white mt-2 mb-4">
+            <h1 className="font-amiri text-5xl font-bold text-papayawhip mt-2 mb-4">
               Gallery
             </h1>
             <p className="text-[var(--school-cream)]/70 max-w-xl">

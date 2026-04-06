@@ -34,6 +34,9 @@ export default function SchoolFooter() {
     setTimeout(() => setStatus("success"), 700);
   };
 
+  // Convert phone number to WhatsApp international format
+  const whatsappUrl = `https://wa.me/${schoolInfo.phone.replace(/^0/, "234")}`;
+
   const socialLinks = [
     {
       icon: <Facebook size={17} />,
@@ -54,7 +57,8 @@ export default function SchoolFooter() {
     {
       icon: <Phone size={14} />,
       value: schoolInfo.phone,
-      href: `tel:${schoolInfo.phone}`,
+      href: whatsappUrl,
+      isWhatsApp: true,
     },
     {
       icon: <Mail size={14} />,
@@ -78,7 +82,6 @@ export default function SchoolFooter() {
           backgroundSize: "80px 80px",
         }}
       />
-     
 
       {/* Main footer content */}
       <div className="relative container py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
@@ -100,7 +103,6 @@ export default function SchoolFooter() {
               </div>
             </div>
           </div>
-         
 
           <p className="text-white/50 text-sm leading-relaxed">
             A distinguished Academy where pupils excel academically, morally and
@@ -164,19 +166,28 @@ export default function SchoolFooter() {
             Contact Us
           </h4>
           <ul className="space-y-4">
-            {contactItems.map(({ icon, value, href }) => (
+            {contactItems.map(({ icon, value, href, isWhatsApp }) => (
               <li key={value}>
                 {href ? (
                   <a
                     href={href}
                     target={href.startsWith("http") ? "_blank" : undefined}
-                    rel="noopener noreferrer"
+                    rel={
+                      href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     className="flex items-start gap-3 text-sm text-white/50 hover:text-white transition-colors group"
                   >
                     <span className="mt-0.5 text-white/55 group-hover:text-white transition-colors shrink-0">
                       {icon}
                     </span>
                     <span className="leading-relaxed break-all">{value}</span>
+                    {isWhatsApp && (
+                      <span className="text-[10px] text-white/30 group-hover:text-[var(--school-accent)] transition-colors">
+                        (WhatsApp)
+                      </span>
+                    )}
                   </a>
                 ) : (
                   <div className="flex items-start gap-3 text-sm text-white/50">

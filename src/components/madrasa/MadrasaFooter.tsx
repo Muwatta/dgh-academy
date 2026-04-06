@@ -1,40 +1,60 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Moon, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Moon, Clock, GraduationCap } from "lucide-react";
 import { madrasaInfo, madrasaNav } from "@/data/madrasa";
 
 export default function MadrasaFooter() {
+  const whatsappUrl = `https://wa.me/${madrasaInfo.phone.replace(/^0/, "234")}`;
+
   return (
-    <footer className="bg-[var(--madrasa-primary-dark)] text-[var(--madrasa-ivory)]">
-      <div className="container py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {/* Brand */}
-        <div>
+    <footer className="bg-[var(--madrasa-primary-dark)] text-[var(--madrasa-ivory)] relative overflow-hidden">
+      {/* Decorative top border */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--madrasa-accent)]/40 via-[var(--madrasa-accent)] to-[var(--madrasa-accent)]/40" />
+
+      <div className="container relative z-10 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Brand Section */}
+        <div className="lg:col-span-1">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-full border-2 border-[var(--madrasa-accent)] flex items-center justify-center font-amiri font-bold text-[var(--madrasa-accent)] text-2xl">
+            <div className="w-12 h-12 rounded-full bg-[var(--madrasa-accent)]/10 border border-[var(--madrasa-accent)]/30 flex items-center justify-center font-amiri font-bold text-[var(--madrasa-accent)] text-2xl shadow-sm">
               م
             </div>
             <div>
-              <div className="font-amiri font-bold text-lg">{madrasaInfo.fullName}</div>
-              <div className="font-amiri text-[var(--madrasa-accent)] text-sm">{madrasaInfo.arabicName}</div>
+              <div className="font-amiri font-bold text-white text-lg leading-tight">
+                {madrasaInfo.fullName}
+              </div>
+              <div className="font-amiri text-[var(--madrasa-accent)] text-sm">
+                {madrasaInfo.arabicName}
+              </div>
             </div>
           </div>
-          <p className="text-sm text-[var(--madrasa-ivory)]/60 leading-relaxed">
+          <p className="text-white/70 text-sm leading-relaxed mb-4">
             {madrasaInfo.tagline}
           </p>
-          <div className="mt-4 flex items-center gap-2 text-[var(--madrasa-accent)] text-sm">
-            <Moon size={14} /> {madrasaInfo.hours} · {madrasaInfo.days}
+          <div className="flex items-center gap-3 text-sm">
+            <div className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1.5">
+              <Moon size={14} className="text-[var(--madrasa-accent)]" />
+              <span className="text-white/80">{madrasaInfo.hours}</span>
+            </div>
+            <div className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1.5">
+              <Clock size={14} className="text-[var(--madrasa-accent)]" />
+              <span className="text-white/80">{madrasaInfo.days}</span>
+            </div>
           </div>
         </div>
 
-        {/* Links */}
+        {/* Navigation Links */}
         <div>
-          <h4 className="font-bold text-[var(--madrasa-accent)] uppercase text-xs tracking-widest mb-4">Navigation</h4>
-          <ul className="space-y-2">
+          <h4 className="font-bold text-[var(--madrasa-accent)] uppercase text-xs tracking-wider mb-5 flex items-center gap-2">
+            <span className="w-5 h-px bg-[var(--madrasa-accent)]/50"></span>
+            Quick Links
+          </h4>
+          <ul className="space-y-2.5">
             {madrasaNav.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-[var(--madrasa-ivory)]/60 hover:text-[var(--madrasa-accent)] transition-colors"
+                  className="text-sm text-white/70 hover:text-[var(--madrasa-accent)] transition-colors duration-200 flex items-center gap-2 group"
                 >
+                  <span className="w-0 group-hover:w-2 h-px bg-[var(--madrasa-accent)] transition-all duration-200"></span>
                   {link.label}
                 </Link>
               </li>
@@ -42,34 +62,92 @@ export default function MadrasaFooter() {
           </ul>
         </div>
 
-        {/* Contact */}
+        {/* Contact Info (without duplicate hours) */}
         <div>
-          <h4 className="font-bold text-[var(--madrasa-accent)] uppercase text-xs tracking-widest mb-4">Contact</h4>
+          <h4 className="font-bold text-[var(--madrasa-accent)] uppercase text-xs tracking-wider mb-5 flex items-center gap-2">
+            <span className="w-5 h-px bg-[var(--madrasa-accent)]/50"></span>
+            Get in Touch
+          </h4>
           <ul className="space-y-3">
-            <li className="flex items-start gap-2.5 text-sm text-[var(--madrasa-ivory)]/60">
-              <MapPin size={14} className="mt-1 shrink-0 text-[var(--madrasa-accent)]" />
-              {madrasaInfo.address}
+            <li className="flex items-start gap-3 text-sm text-white/70 hover:text-white transition-colors">
+              <MapPin
+                size={16}
+                className="mt-0.5 shrink-0 text-[var(--madrasa-accent)]"
+              />
+              <span>{madrasaInfo.address}</span>
             </li>
             <li>
-              <a href={`tel:${madrasaInfo.phone}`} className="flex items-center gap-2.5 text-sm text-[var(--madrasa-ivory)]/60 hover:text-[var(--madrasa-accent)] transition-colors">
-                <Phone size={14} className="text-[var(--madrasa-accent)]" /> {madrasaInfo.phone}
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-sm text-white/70 hover:text-[var(--madrasa-accent)] transition-colors"
+              >
+                <Phone size={16} className="text-[var(--madrasa-accent)]" />
+                <span>{madrasaInfo.phone}</span>
               </a>
             </li>
             <li>
-              <a href={`mailto:${madrasaInfo.email}`} className="flex items-center gap-2.5 text-sm text-[var(--madrasa-ivory)]/60 hover:text-[var(--madrasa-accent)] transition-colors break-all">
-                <Mail size={14} className="text-[var(--madrasa-accent)] shrink-0" /> {madrasaInfo.email}
+              <a
+                href={`mailto:${madrasaInfo.email}`}
+                className="flex items-center gap-3 text-sm text-white/70 hover:text-[var(--madrasa-accent)] transition-colors break-all"
+              >
+                <Mail
+                  size={16}
+                  className="text-[var(--madrasa-accent)] shrink-0"
+                />
+                <span>{madrasaInfo.email}</span>
               </a>
-            </li>
-            <li className="flex items-center gap-2.5 text-sm text-[var(--madrasa-ivory)]/60">
-              <Clock size={14} className="text-[var(--madrasa-accent)]" /> {madrasaInfo.hours}
             </li>
           </ul>
         </div>
+
+        {/* Main School CTA */}
+        <div>
+          <h4 className="font-bold text-[var(--madrasa-accent)] uppercase text-xs tracking-wider mb-5 flex items-center gap-2">
+            <span className="w-5 h-px bg-[var(--madrasa-accent)]/50"></span>
+            Morning School
+          </h4>
+          <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-[var(--madrasa-accent)]/40 transition-all">
+            <div className="flex items-center gap-2 mb-2">
+              <GraduationCap
+                size={18}
+                className="text-[var(--madrasa-accent)]"
+              />
+              <span className="font-semibold text-white text-sm">
+                Dr. Gambo Hamza Islamic Academy
+              </span>
+            </div>
+            <p className="text-white/60 text-xs mb-3">
+              Full-day Nigerian & British curriculum for Nursery & Primary.
+            </p>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-xs font-semibold text-[var(--madrasa-accent)] hover:text-white transition-colors group"
+            >
+              Visit Main School
+              <span className="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </Link>
+          </div>
+        </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="container py-4 text-center text-xs text-[var(--madrasa-ivory)]/30">
-          © {new Date().getFullYear()} DGH Academy Madrasa · Part of Dr. Gambo Hamza Islamic Academy
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10 bg-black/20">
+        <div className="container py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/40">
+          <div>
+            © {new Date().getFullYear()} {madrasaInfo.fullName} · Part of Dr.
+            Gambo Hamza Islamic Academy
+          </div>
+          <div className="flex gap-4">
+            <span>
+              {madrasaInfo.hours} · {madrasaInfo.days}
+            </span>
+            <span className="hidden md:inline">|</span>
+            <span>Est. {madrasaInfo.established}</span>
+          </div>
         </div>
       </div>
     </footer>

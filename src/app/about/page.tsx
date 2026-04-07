@@ -4,16 +4,32 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import SchoolNavbar from "@/components/school/SchoolNavbar";
 import SchoolFooter from "@/components/school/SchoolFooter";
 import {
-  schoolInfo, administrator, schoolHistory,
-  schoolVision, schoolMission, coreValues, specialInitiatives
+  schoolInfo,
+  administrator,
+  director,
+  schoolBursar,
+  technicalManager,
+  schoolHistory,
+  schoolVision,
+  schoolMission,
+  coreValues,
+  specialInitiatives,
 } from "@/data/school";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about the history, vision, mission and values of Dr. Gambo Hamza Islamic Academy — Jos, Plateau State.",
+  description:
+    "Learn about the history, vision, mission and values of Dr. Gambo Hamza Islamic Academy — Jos, Plateau State.",
 };
 
 export default function AboutPage() {
+  const leadershipTeam = [
+    administrator,
+    director,
+    schoolBursar,
+    technicalManager,
+  ];
+
   return (
     <>
       <SchoolNavbar />
@@ -131,39 +147,45 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Administrator */}
+        {/* Leadership */}
         <section className="py-16 bg-[var(--school-cream)]">
-          <div className="container max-w-3xl text-center">
+          <div className="container max-w-6xl">
             <div className="section-tag bg-white text-[var(--school-primary)]">
               Leadership
             </div>
-            <h2 className="font-amiri text-4xl font-bold text-[var(--school-primary)] mb-8">
-              Meet Our Administrator
+            <h2 className="font-amiri text-4xl font-bold text-[var(--school-primary)] mb-10 text-center">
+              Meet Our School Leadership
             </h2>
-            <div className="card shadow-xl">
-              <div className="w-20 h-20 rounded-full bg-[var(--school-primary)] flex items-center justify-center text-white font-amiri font-bold text-3xl mx-auto mb-4">
-                S
-              </div>
-              <div className="font-bold text-[var(--school-primary)] text-xl mb-1">
-                {administrator.name}
-              </div>
-              <div className="text-sm text-[var(--school-text-muted)] mb-6">
-                {administrator.position}
-              </div>
-              <div className="font-amiri text-4xl text-[var(--school-accent)] leading-none mb-3">
-                "
-              </div>
-              {administrator.message
-                ?.split("\n\n")
-                .slice(0, 2)
-                .map((para, i) => (
-                  <p
-                    key={i}
-                    className="text-[var(--school-text-muted)] leading-relaxed text-sm mb-3"
-                  >
-                    {para}
-                  </p>
-                ))}
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {leadershipTeam.map((member) => (
+                <div
+                  key={member.name}
+                  className="card shadow-xl text-center p-6"
+                >
+                  {member.imageUrl ? (
+                    <img
+                      src={member.imageUrl}
+                      alt={member.name}
+                      className="w-28 h-28 rounded-full object-cover mx-auto mb-4"
+                    />
+                  ) : (
+                    <div className="w-28 h-28 rounded-full bg-[var(--school-primary)] flex items-center justify-center text-white font-amiri font-bold text-3xl mx-auto mb-4">
+                      {member.name?.[0]}
+                    </div>
+                  )}
+                  <div className="font-bold text-[var(--school-primary)] text-xl mb-1">
+                    {member.name}
+                  </div>
+                  <div className="text-sm text-[var(--school-text-muted)] mb-4">
+                    {member.position}
+                  </div>
+                  {member.message && (
+                    <p className="text-[var(--school-text-muted)] leading-relaxed text-sm">
+                      {member.message.split("\n\n").slice(0, 2).join(" ")}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </section>

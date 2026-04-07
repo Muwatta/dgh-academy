@@ -28,6 +28,10 @@ import {
   facilities,
   admissionRequirements,
   entryClasses,
+  administrator,
+  director,
+  schoolBursar,
+  technicalManager,
 } from "@/data/school";
 
 // Custom image loader to avoid next.config.js configuration
@@ -101,6 +105,13 @@ export default function HomePage() {
     );
   const nextSlide = () =>
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+
+  const leadershipTeam = [
+    administrator,
+    director,
+    schoolBursar,
+    technicalManager,
+  ];
 
   return (
     <>
@@ -272,6 +283,45 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── LEADERSHIP PREVIEW ── */}
+        <section className="py-20 bg-white">
+          <div className="container">
+            <div className="text-center mb-12">
+              <div className="section-tag bg-[var(--school-cream)] text-[var(--school-primary)]">
+                Leadership
+              </div>
+              <h2 className="font-amiri text-4xl font-bold text-[var(--school-primary)] mb-3">
+                Meet Our School Leadership
+              </h2>
+              <p className="text-[var(--school-text-muted)] max-w-2xl mx-auto">
+                Our administration team guides the academy with strong values,
+                academic excellence and caring leadership.
+              </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+              {leadershipTeam.map((member) => (
+                <div key={member.name} className="card text-center p-6">
+                  <div className="relative mx-auto mb-4 w-32 h-32 rounded-full overflow-hidden border-4 border-[var(--school-accent)]">
+                    <Image
+                      src={member.imageUrl ?? "/images/logo_dgh.jpg"}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                      loader={customLoader}
+                    />
+                  </div>
+                  <div className="font-bold text-[var(--school-primary)] text-lg mb-1">
+                    {member.name}
+                  </div>
+                  <div className="text-sm text-[var(--school-text-muted)]">
+                    {member.position}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

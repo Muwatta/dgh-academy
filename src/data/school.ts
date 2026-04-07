@@ -63,7 +63,25 @@ Since the establishment of the school in 2025, we have witnessed encouraging pro
 Our goal is to raise a generation of confident, knowledgeable, and God-fearing individuals who will contribute positively to their families and society at large.
 
 We invite you to partner with us in this noble journey of building the future of our children.`,
-  imageUrl: "/images/administrator.jpg",
+  imageUrl: "/images/Administrator Sumayyah Hamza Muhammad.jpg",
+};
+
+export const director: StaffMember = {
+  name: "Muhammad Hamza Muhammad Esq.",
+  position: "Director",
+  imageUrl: "/images/Director%20Muhammad%20Hamza%20Muhammad%20Esq..jpeg",
+};
+
+export const schoolBursar: StaffMember = {
+  name: "Aishah Hamza Muhammad",
+  position: "School Bursar",
+  imageUrl: "/images/School%20Bursar%20Aishah%20Hamza%20Muhammad.jpeg",
+};
+
+export const technicalManager: StaffMember = {
+  name: "Rasheedah Hamza Muhammad",
+  position: "Technical Manager",
+  imageUrl: "/images/Technical%20Manager%20Rasheedah%20Hamza%20Muhammad.jpeg",
 };
 
 export const schoolHistory = `Dr. Gambo Hamza Islamic Academy is a private educational institution located at D12 Sabon Layi, Gangare, Jos, Plateau State, Nigeria. The school was established in the year 2025 by the children of the late Dr. Gambo Hamza as a way of preserving and fulfilling his lifelong dream.

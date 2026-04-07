@@ -200,7 +200,7 @@ const galleryImages = [
   },
   {
     id: 18,
-    src: "/images/founder_dgh.jpg",
+    src: "/images/founder.jpg",
     alt: "Founder portrait",
     caption: "Founder Tribute",
     title: "Our Founder",

@@ -32,6 +32,7 @@ import {
   director,
   schoolBursar,
   technicalManager,
+  founder,
 } from "@/data/school";
 
 // Custom image loader to avoid next.config.js configuration
@@ -107,6 +108,7 @@ export default function HomePage() {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
 
   const leadershipTeam = [
+    founder,
     administrator,
     director,
     schoolBursar,

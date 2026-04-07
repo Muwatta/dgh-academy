@@ -178,5 +178,5 @@ At our Madrasa, we believe that every child has the capacity to connect with the
 We warmly invite parents to enrol their children and to be active partners in this blessed journey. Together, we can raise a generation that is both educated and guided.
 
 Jazakumullahu Khayran.`,
-  imageUrl: "/images/mallam-placeholder.jpg",
+  imageUrl: "/images/madrasa-student.jpg",
 };

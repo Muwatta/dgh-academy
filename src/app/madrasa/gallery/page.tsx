@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const galleryImages = [
   {
     id: 1,
-    src: "/images/overview%20of%20madrasa%20students.jpg",
+    src: "/images/madrasa-overview.jpg",
     alt: "Overview of madrasa students",
     caption: "Together in Learning",
     title: "Madrasa Assembly",
@@ -22,7 +22,7 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: "/images/during%20ICT%20class.jpg",
+    src: "/images/ict-class.jpg",
     alt: "Students during ICT class",
     caption: "Digital Learning",
     title: "ICT Class",
@@ -33,7 +33,7 @@ const galleryImages = [
   },
   {
     id: 3,
-    src: "/images/coding%20session%20Pictoblox.jpg",
+    src: "/images/coding-session.jpg",
     alt: "Students coding with Pictoblox",
     caption: "Coding & Creativity",
     title: "Pictoblox Workshop",
@@ -44,7 +44,7 @@ const galleryImages = [
   },
   {
     id: 4,
-    src: "/images/a%20madrasa%20student.jpg",
+    src: "/images/madrasa-student.jpg",
     alt: "A madrasa student studying",
     caption: "Focused Study",
     title: "Quiet Classroom Time",
@@ -55,7 +55,7 @@ const galleryImages = [
   },
   {
     id: 5,
-    src: "/images/a%20female%20pupil%20standing.jpg",
+    src: "/images/pupil-standing.jpg",
     alt: "Female pupil standing with confidence",
     caption: "Confident Learner",
     title: "Student Leadership",
@@ -66,7 +66,7 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: "/images/a%20female%20pupil%20on%20the%20staircase.jpg",
+    src: "/images/pupil-staircase.jpg",
     alt: "Female pupil on the staircase",
     caption: "Welcoming Campus",
     title: "Arrival Moment",
@@ -77,7 +77,7 @@ const galleryImages = [
   },
   {
     id: 7,
-    src: "/images/pupils%20playing%20during%20game%20session.jpg",
+    src: "/images/game-session.jpg",
     alt: "Pupils playing during a game session",
     caption: "Healthy Recreation",
     title: "Playtime Together",
@@ -88,7 +88,7 @@ const galleryImages = [
   },
   {
     id: 8,
-    src: "/images/toddlers%20in%20their%20class.jpg",
+    src: "/images/toddlers-class.jpg",
     alt: "Toddlers learning in their class",
     caption: "Early Foundations",
     title: "Early Years Learning",
@@ -99,7 +99,7 @@ const galleryImages = [
   },
   {
     id: 9,
-    src: "/images/toddlers%20playing%20with%20swing.jpg",
+    src: "/images/toddlers-swing.jpg",
     alt: "Toddlers playing with a swing",
     caption: "Playful Start",
     title: "Outdoor Play",
@@ -110,7 +110,7 @@ const galleryImages = [
   },
   {
     id: 10,
-    src: "/images/another%20madrasa%20student%20standing.jpg",
+    src: "/images/madrasa-student-2.jpg",
     alt: "Madrasa student standing in the classroom",
     caption: "Active Participation",
     title: "Classroom Engagement",

@@ -76,7 +76,7 @@ const heroSlides = [
       "British & Nigerian curricula integrated with robust Islamic Education and ICT.",
     ctaText: "Academic Programs",
     ctaLink: "/academics",
-    image: "/images/in the library for prep.jpg",
+    image: "/images/library-prep.jpg",
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ const heroSlides = [
       "Limited seats available for Nursery & Primary levels. Join our learning community.",
     ctaText: "Admissions",
     ctaLink: "/admissions",
-    image: "/images/during ICT class.jpg",
+    image: "/images/ict-class.jpg",
   },
 ];
 

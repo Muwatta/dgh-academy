@@ -13,7 +13,7 @@ import Image from "next/image";
 const galleryImages = [
   {
     id: 1,
-    src: "/images/overview%20of%20madrasa%20students.jpg",
+    src: "/images/madrasa-overview.jpg",
     alt: "Overview of madrasa students",
     caption: "Daily Assembly",
     title: "School Community",
@@ -24,7 +24,7 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: "/images/during%20ICT%20class.jpg",
+    src: "/images/ict-class.jpg",
     alt: "Students during ICT class",
     caption: "Digital Learning",
     title: "ICT Class",
@@ -35,7 +35,7 @@ const galleryImages = [
   },
   {
     id: 3,
-    src: "/images/coding%20session%20Pictoblox.jpg",
+    src: "/images/coding-session.jpg",
     alt: "Students coding with Pictoblox",
     caption: "Coding Session",
     title: "Pictoblox Class",
@@ -46,18 +46,17 @@ const galleryImages = [
   },
   {
     id: 4,
-    src: "/images/a%20madrasa%20student.jpg",
+    src: "/images/madrasa-student.jpg",
     alt: "A madrasa student studying",
     caption: "Focused Learning",
     title: "Classroom Study",
-    description:
-      "First day in DGHI Academy enviroment",
+    description: "First day in DGHI Academy enviroment",
     tag: "Study",
     date: "March 2026",
   },
   {
     id: 5,
-    src: "/images/another%20madrasa%20student%20standing.jpg",
+    src: "/images/madrasa-student-2.jpg",
     alt: "Madrasa student standing in the classroom",
     caption: "Active Participation",
     title: "Student Engagement",
@@ -68,7 +67,7 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: "/images/a%20female%20pupil%20standing.jpg",
+    src: "/images/pupil-standing.jpg",
     alt: "Female pupil standing with confidence",
     caption: "Inspired Learner",
     title: "Student Confidence",
@@ -79,7 +78,7 @@ const galleryImages = [
   },
   {
     id: 7,
-    src: "/images/a%20female%20pupil%20on%20the%20staircase.jpg",
+    src: "/images/pupil-staircase.jpg",
     alt: "Female pupil on the staircase",
     caption: "Campus Welcome",
     title: "School Arrival",
@@ -90,7 +89,7 @@ const galleryImages = [
   },
   {
     id: 8,
-    src: "/images/pupils%20smilng%20on%20the%20walkway.jpg",
+    src: "/images/pupils-walkway.jpg",
     alt: "Pupils smiling on the walkway",
     caption: "Happy Walkway",
     title: "Campus Life",
@@ -101,7 +100,7 @@ const galleryImages = [
   },
   {
     id: 9,
-    src: "/images/pupils%20playing%20during%20game%20session.jpg",
+    src: "/images/game-session.jpg",
     alt: "Pupils playing during a game session",
     caption: "Playtime",
     title: "Recess & Teamwork",
@@ -112,7 +111,7 @@ const galleryImages = [
   },
   {
     id: 10,
-    src: "/images/toddlers%20playing%20with%20swing.jpg",
+    src: "/images/toddlers-swing.jpg",
     alt: "Toddlers playing with a swing",
     caption: "Early Play",
     title: "Foundation Play",
@@ -123,7 +122,7 @@ const galleryImages = [
   },
   {
     id: 11,
-    src: "/images/toddlers%20in%20their%20class.jpg",
+    src: "/images/toddlers-class.jpg",
     alt: "Toddlers learning in their class",
     caption: "Tiny Classrooms",
     title: "Early Learning",
@@ -134,7 +133,7 @@ const galleryImages = [
   },
   {
     id: 12,
-    src: "/images/some%20staff%20training%20session.jpg",
+    src: "/images/staff-training.jpg",
     alt: "Staff training session",
     caption: "Teacher Growth",
     title: "Staff Development",
@@ -145,7 +144,7 @@ const galleryImages = [
   },
   {
     id: 13,
-    src: "/images/school%20wall%20with%20school%20name.jpg",
+    src: "/images/school-wall.jpg",
     alt: "School wall with the school name",
     caption: "School Identity",
     title: "Campus Entrance",
@@ -189,7 +188,7 @@ const galleryImages = [
   },
   {
     id: 17,
-    src: "/images/in%20the%20library%20for%20prep.jpg",
+    src: "/images/library-prep.jpg",
     alt: "Students preparing in the library",
     caption: "Study Prep",
     title: "Library Preparation",
@@ -200,7 +199,7 @@ const galleryImages = [
   },
   {
     id: 18,
-    src: "/images/founder.jpg",
+    src: "/images/founder-dr-gambo.jpg",
     alt: "Founder portrait",
     caption: "Founder Tribute",
     title: "Our Founder",
@@ -211,7 +210,7 @@ const galleryImages = [
   },
   {
     id: 19,
-    src: "/images/formal%20opening.jpg",
+    src: "/images/formal-opening.jpg",
     alt: "Formal opening event",
     caption: "Opening Ceremony",
     title: "School Launch",
@@ -222,7 +221,7 @@ const galleryImages = [
   },
   {
     id: 20,
-    src: "/images/enviroment_dgh.jpg",
+    src: "/images/environment.jpg",
     alt: "School grounds",
     caption: "Campus Grounds",
     title: "Beautiful Grounds",
@@ -233,7 +232,7 @@ const galleryImages = [
   },
   {
     id: 21,
-    src: "/images/enviroment1_dgh.jpg",
+    src: "/images/environment-2.jpg",
     alt: "Students learning outside",
     caption: "Outdoor Campus",
     title: "Open-Air Learning",

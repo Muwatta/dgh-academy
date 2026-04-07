@@ -63,31 +63,31 @@ Since the establishment of the school in 2025, we have witnessed encouraging pro
 Our goal is to raise a generation of confident, knowledgeable, and God-fearing individuals who will contribute positively to their families and society at large.
 
 We invite you to partner with us in this noble journey of building the future of our children.`,
-  imageUrl: "/images/Administrator Sumayyah Hamza Muhammad.jpg",
+  imageUrl: "/images/administrator-sumayyah.jpg",
 };
 
 export const director: StaffMember = {
   name: "Muhammad Hamza Muhammad Esq.",
   position: "Director",
-  imageUrl: "/images/Director%20Muhammad%20Hamza%20Muhammad%20Esq..jpeg",
+  imageUrl: "/images/director-muhammad-hamza.jpg",
 };
 
 export const schoolBursar: StaffMember = {
   name: "Aishah Hamza Muhammad",
   position: "School Bursar",
-  imageUrl: "/images/School%20Bursar%20Aishah%20Hamza%20Muhammad.jpeg",
+  imageUrl: "/images/bursar-aishah.jpg",
 };
 
 export const technicalManager: StaffMember = {
   name: "Rasheedah Hamza Muhammad",
   position: "Technical Manager",
-  imageUrl: "/images/Technical%20Manager%20Rasheedah%20Hamza%20Muhammad.jpeg",
+  imageUrl: "/images/technical-manager-rasheedah.jpg",
 };
 
 export const founder: StaffMember = {
   name: "Late Dr. Gambo Hamza",
   position: "Founder (Late)",
-  imageUrl: "/images/founder.jpg",
+  imageUrl: "/images/founder-dr-gambo.jpg",
   message: `His vision continues to guide the academy, even after his passing.`,
 };
 

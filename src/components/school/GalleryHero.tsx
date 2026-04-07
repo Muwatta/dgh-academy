@@ -61,7 +61,7 @@ export default function GalleryHero() {
       {/* ── Try to load image if exists, overlaid on gradient ── */}
       <div
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ${fading ? "opacity-0" : "opacity-30"}`}
-        style={{ backgroundImage: `url('/images/school-${current + 1}.jpg')` }}
+        style={{ backgroundImage: `url('/images/environment.jpg')` }}
       />
 
       {/* ── Dark overlay for readability ── */}

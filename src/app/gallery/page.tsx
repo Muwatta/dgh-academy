@@ -5,7 +5,7 @@ import SchoolFooter from "@/components/school/SchoolFooter";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Photos of DGHI Academy — classrooms, students, events and school life.",
+    "Photos of DGHIA — classrooms, students, events and school life.",
 };
 
 import Image from "next/image";
@@ -18,55 +18,23 @@ const galleryImages = [
     caption: "Daily Assembly",
     title: "School Community",
     description:
-      "Pupils gather together for morning assembly, Quran recitation and campus announcements.",
+      "Pupils gather together for morning assembly, Quran recitation and school announcements.",
     tag: "Community",
     date: "February 2026",
   },
   {
     id: 2,
-    src: "/images/ict-class.jpg",
-    alt: "Students during ICT class",
-    caption: "Digital Learning",
-    title: "ICT Class",
-    description:
-      "Children learn computer skills that prepare them for a technology-driven world.",
-    tag: "Tech",
-    date: "Feb 2026",
-  },
-  {
-    id: 3,
     src: "/images/coding-session.jpg",
     alt: "Students coding with Pictoblox",
     caption: "Coding Session",
-    title: "Pictoblox Class",
+    title: "ICT Class",
     description:
       "A creative technology lesson where pupils build projects and solve problems.",
     tag: "STEM",
     date: "March 2026",
   },
   {
-    id: 4,
-    src: "/images/madrasa-student.jpg",
-    alt: "A madrasa student studying",
-    caption: "Focused Learning",
-    title: "Classroom Study",
-    description: "First day in DGHI Academy enviroment",
-    tag: "Study",
-    date: "March 2026",
-  },
-  {
-    id: 5,
-    src: "/images/madrasa-student-2.jpg",
-    alt: "Madrasa student standing in the classroom",
-    caption: "Active Participation",
-    title: "Student Engagement",
-    description:
-      "Excitement as his first day at DGHI Academy begins with a warm welcome and new friendships.",
-    tag: "Engagement",
-    date: "March 2026",
-  },
-  {
-    id: 6,
+    id: 3,
     src: "/images/pupil-standing.jpg",
     alt: "Female pupil standing with confidence",
     caption: "Inspired Learner",
@@ -77,29 +45,29 @@ const galleryImages = [
     date: "Feb 2026",
   },
   {
-    id: 7,
+    id: 4,
     src: "/images/pupil-staircase.jpg",
     alt: "Female pupil on the staircase",
-    caption: "Campus Welcome",
+    caption: "School Welcome",
     title: "School Arrival",
     description:
-      "Pupils arrive happily on campus, ready to begin the day with purpose and energy.",
+      "Pupils arrive happily at school, ready to begin the day with purpose and energy.",
     tag: "Welcome",
     date: "Feb 2026",
   },
   {
-    id: 8,
+    id: 5,
     src: "/images/pupils-walkway.jpg",
     alt: "Pupils smiling on the walkway",
     caption: "Happy Walkway",
-    title: "Campus Life",
+    title: "School Life",
     description:
       "Students enjoy friendly moments while moving between lessons and activities.",
     tag: "Life",
     date: "Feb 2026",
   },
   {
-    id: 9,
+    id: 6,
     src: "/images/game-session.jpg",
     alt: "Pupils playing during a game session",
     caption: "Playtime",
@@ -110,7 +78,7 @@ const galleryImages = [
     date: "Feb 2026",
   },
   {
-    id: 10,
+    id: 7,
     src: "/images/toddlers-swing.jpg",
     alt: "Toddlers playing with a swing",
     caption: "Early Play",
@@ -121,7 +89,7 @@ const galleryImages = [
     date: "March 2026",
   },
   {
-    id: 11,
+    id: 8,
     src: "/images/toddlers-class.jpg",
     alt: "Toddlers learning in their class",
     caption: "Tiny Classrooms",
@@ -132,7 +100,7 @@ const galleryImages = [
     date: "March 2026",
   },
   {
-    id: 12,
+    id: 9,
     src: "/images/staff-training.jpg",
     alt: "Staff training session",
     caption: "Teacher Growth",
@@ -143,18 +111,18 @@ const galleryImages = [
     date: "September 2026",
   },
   {
-    id: 13,
+    id: 10,
     src: "/images/school-wall.jpg",
     alt: "School wall with the school name",
     caption: "School Identity",
-    title: "Campus Entrance",
+    title: "School Entrance",
     description:
       "The school entrance proudly displays our academy name and commitment to excellence.",
-    tag: "Campus",
+    tag: "School",
     date: "February 2026",
   },
   {
-    id: 14,
+    id: 11,
     src: "/images/playground_dgh.jpg",
     alt: "Outdoor school activity",
     caption: "Playground Fun",
@@ -165,18 +133,18 @@ const galleryImages = [
     date: "March 2026",
   },
   {
-    id: 15,
+    id: 12,
     src: "/images/logo_dgh.jpg",
     alt: "School logo",
     caption: "Our Emblem",
     title: "School Logo",
     description:
-      "The DGHI Academy logo represents our vision of faith, learning and community service.",
+      "The DGHIA logo represents our vision of faith, learning and community service.",
     tag: "Identity",
     date: "January 2026",
   },
   {
-    id: 16,
+    id: 13,
     src: "/images/library_dgh.jpg",
     alt: "School library",
     caption: "Library Corner",
@@ -187,29 +155,28 @@ const galleryImages = [
     date: "February 2026",
   },
   {
-    id: 17,
+    id: 14,
     src: "/images/library-prep.jpg",
     alt: "Students preparing in the library",
     caption: "Study Prep",
-    title: "Library Preparation",
+    title: "Library Prep",
     description:
       "Learners take time in the library to prepare assignments, revise and reflect.",
     tag: "Study",
     date: "March 2026",
   },
   {
-    id: 18,
+    id: 15,
     src: "/images/founder-dr-gambo.jpg",
     alt: "Founder portrait",
     caption: "Founder Tribute",
     title: "Our Founder",
-    description:
-      "The founder’s vision inspires everything we do at DGHI Academy.",
+    description: "The founder’s vision inspires everything we do at DGHIA.",
     tag: "Leadership",
     date: "January 2026",
   },
   {
-    id: 19,
+    id: 16,
     src: "/images/formal-opening.jpg",
     alt: "Formal opening event",
     caption: "Opening Ceremony",
@@ -220,29 +187,29 @@ const galleryImages = [
     date: "August 2026",
   },
   {
-    id: 20,
+    id: 17,
     src: "/images/environment.jpg",
     alt: "School grounds",
-    caption: "Campus Grounds",
+    caption: "School Grounds",
     title: "Beautiful Grounds",
     description:
-      "A peaceful campus environment creates the right atmosphere for learning and growth.",
-    tag: "Campus",
+      "A peaceful school environment creates the right atmosphere for learning and growth.",
+    tag: "School",
     date: "February 2026",
   },
   {
-    id: 21,
+    id: 18,
     src: "/images/environment-2.jpg",
     alt: "Students learning outside",
-    caption: "Outdoor Campus",
-    title: "Open-Air Learning",
+    caption: "Outdoor School",
+    title: "Outside Display",
     description:
-      "Some lessons extend to the outdoors, bringing nature into the students’ learning experience.",
+      "Outside displays of the school’s vision and values inspire students and visitors alike.",
     tag: "Experience",
     date: "March 2026",
   },
   {
-    id: 22,
+    id: 19,
     src: "/images/class1_dgh.jpg",
     alt: "Students learning in class",
     caption: "Classroom Focus",
@@ -253,11 +220,11 @@ const galleryImages = [
     date: "March 2026",
   },
   {
-    id: 23,
+    id: 20,
     src: "/images/uniform_dgh.jpg",
     alt: "Students in uniform",
     caption: "School Spirit",
-    title: "Uniformed Students",
+    title: "Uniform Pride",
     description:
       "The academy uniform reflects our commitment to unity, discipline and pride.",
     tag: "Culture",
@@ -292,7 +259,7 @@ export default function GalleryPage() {
             {/* Description */}
             <p className="mt-6 text-base md:text-lg text-[var(--school-cream)]/80 max-w-lg leading-relaxed">
               A glimpse into the daily life, events, and learning environment of
-              DGHI Academy.
+              DGHIA.
             </p>
           </div>
         </section>

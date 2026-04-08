@@ -297,17 +297,17 @@ export default function MadrasaHomePage() {
         <div className="container max-w-4xl">
           <div className="text-center mb-10">
             <div className="section-tag bg-[var(--madrasa-primary)]/10 text-[var(--madrasa-primary)]">
-              From the Head of Madrasa
+              From the Mudeer
             </div>
             <h2 className="font-amiri text-4xl font-bold text-[var(--madrasa-primary)]">
-              A Message from the Mallam
+              A Message from the Mudeer
             </h2>
           </div>
           <div className="bg-[var(--madrasa-primary)] rounded-2xl p-8 md:p-12 relative overflow-hidden">
             <div className="absolute top-0 right-0 font-amiri text-[150px] text-[var(--madrasa-accent)]/10 leading-none select-none">
               "
             </div>
-            <p className="font-amiri text-[var(--madrasa-accent)] text-xl mb-4 relative z-10">
+            <p className="font-amiri text-[var(--madrasa-accent)] text-xl mb-4 relative z-10 rtl">
               بسم الله الرحمن الرحيم
             </p>
             <p className="text-white/80 leading-relaxed mb-8 text-sm relative z-10 max-w-2xl">

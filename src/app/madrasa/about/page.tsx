@@ -14,7 +14,7 @@ import { Star, Award, BookOpen, Users } from "lucide-react";
 export const metadata: Metadata = {
   title: "About the Madrasa",
   description:
-    "Learn about DGHI Academy Madrasa — evening Quranic and Islamic education in Gangare, Jos.",
+    "Learn about DGHIA Madrasa — evening Quranic and Islamic education in Gangare, Jos.",
 };
 
 export default function MadrasaAboutPage() {
@@ -113,7 +113,7 @@ export default function MadrasaAboutPage() {
             Leadership
           </div>
           <h2 className="font-amiri text-4xl font-bold text-[var(--madrasa-primary)] mb-8">
-            Head of Madrasa
+            Mudeer
           </h2>
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="w-20 h-20 rounded-full border-2 border-[var(--madrasa-accent)] flex items-center justify-center font-amiri text-[var(--madrasa-accent)] text-3xl mx-auto mb-4">

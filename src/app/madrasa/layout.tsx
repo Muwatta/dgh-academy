@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | DGHI Madrasa",
   },
   description:
-    "DGHI Academy Madrasa — Evening Quran recitation, Hifz, Arabic language and Islamic education for children in Gangare, Jos. Enrol today.",
+    "DGHIA Madrasa — Evening Quran recitation, Hifz, Arabic language and Islamic education for children in Gangare, Jos. Enrol today.",
   keywords: [
     "DGHI Madrasa",
     "Islamic school Jos",
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
     url: "https://www.dghacademy.com/madrasa",
-    siteName: "DGHI Academy Madrasa",
+    siteName: "DGHIA Madrasa",
     title: "DGHI Madrasa | Evening Islamic School — Gangare, Jos",
     description:
-      "Evening Quran, Hifz, Arabic and Islamic Education — DGHI Academy Madrasa, Jos.",
+      "Evening Quran, Hifz, Arabic and Islamic Education — DGHIA Madrasa, Jos.",
   },
 };
 

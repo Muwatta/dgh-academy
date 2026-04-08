@@ -5,7 +5,7 @@ import { madrasaInfo } from "@/data/madrasa";
 export const metadata: Metadata = {
   title: "Madrasa Contact",
   description:
-    "Contact DGHI Academy Madrasa — phone, email or visit us in Gangare, Jos.",
+    "Contact DGHIA Madrasa — phone, email or visit us in Gangare, Jos.",
 };
 
 export default function MadrasaContactPage() {

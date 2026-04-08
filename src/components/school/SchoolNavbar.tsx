@@ -71,7 +71,7 @@ export default function SchoolNavbar() {
             </div>
             <div>
               <div className="font-amiri font-bold text-[var(--school-primary)] text-base leading-tight">
-                DGHI Academy
+                DGHIA
               </div>
             </div>
           </Link>

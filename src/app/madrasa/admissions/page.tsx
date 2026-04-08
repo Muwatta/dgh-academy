@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Madrasa Admissions",
   description:
-    "Enrol your child in DGHI Academy Madrasa — evening Islamic education in Jos.",
+    "Enrol your child in DGHIA Madrasa — evening Islamic education in Jos.",
 };
 
 export default function MadrasaAdmissionsPage() {

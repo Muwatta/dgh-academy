@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Academics",
   description:
-    "Explore DGHI Academy's Nigerian & British curriculum — Nursery through Primary with ICT, Islamic Education and more.",
+    "Explore DGHIA's Nigerian & British curriculum — Nursery through Primary with ICT, Islamic Education and more.",
 };
 
 export default function AcademicsPage() {
@@ -60,7 +60,7 @@ export default function AcademicsPage() {
                   Nigerian & British Dual Curriculum
                 </h2>
                 <p className="text-[var(--school-text-muted)] leading-relaxed mb-4">
-                  DGHI Academy delivers a carefully integrated dual curriculum
+                  DGHIA delivers a carefully integrated dual curriculum
                   that meets Nigerian national standards while incorporating the
                   internationally respected British primary framework. This
                   gives our pupils the best of both worlds — local relevance and

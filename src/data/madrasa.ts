@@ -19,7 +19,7 @@ export const madrasaNav: NavLink[] = [
 ];
 
 export const madrasaInfo = {
-  fullName: "DGHI Academy Madrasa",
+  fullName: "DGHIA Madrasa",
   shortName: "DGHI Madrasa",
   arabicName: "مدرسة أكاديمية د.غ.عـ",
   tagline: "Nurturing Hearts Through the Light of the Quran",
@@ -44,13 +44,13 @@ export const madrasaHero: HeroContent = {
 export const madrasaStats: Stat[] = [
   { label: "Session", value: "Afternoon", icon: "moon" },
   { label: "Hours", value: "2pm – 6pm", icon: "clock" },
-  { label: "Days", value: "Mon – Fri", icon: "calendar" },
+  { label: "Days", value: "Thur – Sun", icon: "calendar" },
   { label: "Focus", value: "Quran & Arabic", icon: "book-open" },
 ];
 
-export const madrasaAbout = `The DGHI Academy Madrasa is the afternoon Islamic education arm of Dr. Gambo Hamza Islamic Academy. Established alongside the main school in 2025, the Madrasa was born from the same vision of the late Dr. Gambo Hamza — to raise a generation rooted in knowledge, faith, and upright character.
+export const madrasaAbout = `The DGHIA Madrasa is the afternoon Islamic education arm of Dr. Gambo Hamza Islamic Academy. Established alongside the main school in 2025, the Madrasa was born from the same vision of the late Dr. Gambo Hamza — to raise a generation rooted in knowledge, faith, and upright character.
 
-The Madrasa operates every weekday from 2:00pm to 6:00pm, welcoming children who attend the morning school as well as children from the wider community. Our curriculum is built around the Quran as the centre of all learning, with supporting programmes in Arabic Language, Hadith, Fiqh, and Islamic History.
+The Madrasa operates Thursday to Sunday from 2:00pm to 6:00pm, welcoming children who attend the morning school as well as children from the wider community. Our curriculum is built around the Quran as the centre of all learning, with supporting programmes in Arabic Language, Hadith, Fiqh, and Islamic History.
 
 Our Mallams (teachers) are qualified, experienced, and deeply committed to creating a loving yet disciplined learning environment where every child feels valued and motivated to grow in their deen.`;
 
@@ -132,11 +132,14 @@ export const madrasaTimetable = [
   { time: "2:00pm – 2:20pm", activity: "Arrival, Wudu & Opening Du'as" },
   { time: "2:20pm – 2:50pm", activity: "Quran Recitation (Tajweed & Tilawah)" },
   { time: "2:50pm – 3:20pm", activity: "Hifz / Memorisation (New Lesson)" },
-  { time: "3:20pm – 3:45pm", activity: "Islamic Education / Seerah" },
-  { time: "3:45pm – 4:15pm", activity: "Arabic Language (Reading & Writing)" },
-  { time: "4:15pm – 4:45pm", activity: "Review & Group Practice" },
-  { time: "4:45pm – 5:45pm", activity: "Individual Coaching & Du'a Review" },
-  { time: "5:45pm – 6:00pm", activity: "Closing Du'as, Review & Dismissal" },
+  { time: "3:20pm – 3:45pm", activity: "Islamic Education / Seerah" },  {
+    time: "3:45pm – 4:15pm",
+    activity: "Salatul Asr (Congregation & Short Adhkar)",
+  },
+  { time: "4:15pm – 4:45pm", activity: "Arabic Language (Reading & Writing)" },
+  { time: "4:45pm – 5:15pm", activity: "Review & Group Practice" },
+  { time: "5:15pm – 5:30pm", activity: "Individual Coaching & Du'a Review" },
+  { time: "5:30pm – 6:00pm", activity: "Closing Du'as & Dismissal" },
 ];
 
 export const madrasaFacilities: Facility[] = [
@@ -167,16 +170,16 @@ export const madrasaClasses = [
 ];
 
 export const madrasaMallam: StaffMember = {
-  name: "Mallam",
+  name: "Mudeer",
   position: "Head of Madrasa",
   message: `In the name of Allah, the Most Gracious, the Most Merciful.
 
-Welcome to the DGHI Academy Madrasa — an afternoon school dedicated to nurturing the hearts and minds of our children through the timeless teachings of the Holy Quran and the Sunnah of our beloved Prophet Muhammad (peace be upon him).
+Welcome to the DGHIA Madrasa — an afternoon school dedicated to nurturing the hearts and minds of our children through the timeless teachings of the Holy Quran and the Sunnah of our beloved Prophet Muhammad (peace be upon him).
 
 At our Madrasa, we believe that every child has the capacity to connect with the Quran. Our role as teachers is to make that connection joyful, consistent and deep-rooted. We do not merely teach letters — we cultivate love for the Book of Allah.
 
 We warmly invite parents to enrol their children and to be active partners in this blessed journey. Together, we can raise a generation that is both educated and guided.
 
 Jazakumullahu Khayran.`,
-  imageUrl: "/images/madrasa-student.jpg",
+  imageUrl: "/images/mudeer.jpg",
 };

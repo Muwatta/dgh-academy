@@ -21,29 +21,7 @@ const galleryImages = [
     date: "April 2026",
   },
   {
-    id: 2,
-    src: "/images/ict-class.jpg",
-    alt: "Students during ICT class",
-    caption: "Digital Learning",
-    title: "ICT Class",
-    description:
-      "Pupils develop computer skills and confidence through guided classroom activities.",
-    tag: "Innovation",
-    date: "April 2026",
-  },
-  {
     id: 3,
-    src: "/images/coding-session.jpg",
-    alt: "Students coding with Pictoblox",
-    caption: "Coding & Creativity",
-    title: "Pictoblox Workshop",
-    description:
-      "Students build creative coding projects while strengthening problem-solving skills.",
-    tag: "STEM",
-    date: "March 2026",
-  },
-  {
-    id: 4,
     src: "/images/madrasa-student.jpg",
     alt: "A madrasa student studying",
     caption: "Focused Study",
@@ -54,40 +32,7 @@ const galleryImages = [
     date: "March 2026",
   },
   {
-    id: 5,
-    src: "/images/pupil-standing.jpg",
-    alt: "Female pupil standing with confidence",
-    caption: "Confident Learner",
-    title: "Student Leadership",
-    description:
-      "Students are encouraged to speak, participate and grow in confidence every day.",
-    tag: "Character",
-    date: "April 2026",
-  },
-  {
     id: 6,
-    src: "/images/pupil-staircase.jpg",
-    alt: "Female pupil on the staircase",
-    caption: "Welcoming Campus",
-    title: "Arrival Moment",
-    description:
-      "Children arrive ready for afternoon lessons, supported by a safe and welcoming environment.",
-    tag: "Welcome",
-    date: "April 2026",
-  },
-  {
-    id: 7,
-    src: "/images/game-session.jpg",
-    alt: "Pupils playing during a game session",
-    caption: "Healthy Recreation",
-    title: "Playtime Together",
-    description:
-      "Outdoor games build teamwork, physical fitness and joyful friendships.",
-    tag: "Wellbeing",
-    date: "April 2026",
-  },
-  {
-    id: 8,
     src: "/images/toddlers-class.jpg",
     alt: "Toddlers learning in their class",
     caption: "Early Foundations",
@@ -98,18 +43,7 @@ const galleryImages = [
     date: "March 2026",
   },
   {
-    id: 9,
-    src: "/images/toddlers-swing.jpg",
-    alt: "Toddlers playing with a swing",
-    caption: "Playful Start",
-    title: "Outdoor Play",
-    description:
-      "The early years programme includes safe outdoor play to support growth and joy.",
-    tag: "Play",
-    date: "March 2026",
-  },
-  {
-    id: 10,
+    id: 8,
     src: "/images/madrasa-student-2.jpg",
     alt: "Madrasa student standing in the classroom",
     caption: "Active Participation",

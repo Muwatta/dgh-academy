@@ -20,13 +20,13 @@ const nunitoSans = Nunito_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dghacademy.com"),
   title: {
-    default: "Dr. Gambo Hamza Islamic Academy | DGHI Academy Jos",
-    template: "%s | DGHI Academy",
+    default: "Dr. Gambo Hamza Islamic Academy | DGHIA Jos",
+    template: "%s | DGHIA",
   },
   description:
     "Dr. Gambo Hamza Islamic Academy — A distinguished private nursery and primary school in Gangare, Jos offering Nigerian & British curriculum alongside strong Islamic values. Enquire or apply today.",
   keywords: [
-    "DGHI Academy",
+    "DGHIA",
     "Dr Gambo Hamza Islamic Academy",
     "Islamic school Jos",
     "private school Gangare",
@@ -36,18 +36,18 @@ export const metadata: Metadata = {
     "Madrasa Jos",
     "dghacademy.com",
   ],
-  authors: [{ name: "DGHI Academy" }],
+  authors: [{ name: "DGHIA" }],
   creator: "Dr. Gambo Hamza Islamic Academy",
   openGraph: {
     type: "website",
     locale: "en_NG",
     url: "https://www.dghacademy.com",
-    siteName: "DGHI Academy",
-    title: "Dr. Gambo Hamza Islamic Academy | DGHI Academy Jos",
+    siteName: "DGHIA",
+    title: "Dr. Gambo Hamza Islamic Academy | DGHIA Jos",
     description:
       "A distinguished Academy where pupils excel academically, morally and spiritually — Gangare, Jos, Nigeria.",
     images: [
-      { url: "/og-image.jpg", width: 1200, height: 630, alt: "DGHI Academy" },
+      { url: "/og-image.jpg", width: 1200, height: 630, alt: "DGHIA" },
     ],
   },
   twitter: {

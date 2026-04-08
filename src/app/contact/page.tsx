@@ -135,7 +135,7 @@ export default function ContactPage() {
                           Facebook
                         </div>
                         <div className="text-blue-700 font-semibold">
-                          Follow DGHI Academy on Facebook
+                          Follow DGHIA on Facebook
                         </div>
                       </div>
                     </a>

@@ -20,7 +20,7 @@ export const schoolNav: NavLink[] = [
 
 export const schoolInfo: SchoolInfo = {
   fullName: "Dr. Gambo Hamza Islamic Academy",
-  shortName: "DGHI Academy",
+  shortName: "DGHIA",
   motto: "",
   established: 2025,
   type: "Nursery & Primary",

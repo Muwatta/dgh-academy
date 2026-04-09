@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import SchoolNavbar from "@/components/school/SchoolNavbar";
 import SchoolFooter from "@/components/school/SchoolFooter";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { admissionRequirements, entryClasses, schoolInfo } from "@/data/school";
 
 export const metadata: Metadata = {
@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function AdmissionsPage() {
+  const whatsappUrl = `https://wa.me/${schoolInfo.phone.replace(/^0/, "234")}`;
+
   return (
     <>
       <SchoolNavbar />
@@ -41,10 +43,19 @@ export default function AdmissionsPage() {
             </p>
 
             {/* Optional CTA */}
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:gap-4">
               <button className="px-6 py-3 bg-[var(--school-accent)] text-white rounded-md text-sm font-medium hover:opacity-90 transition">
                 Start Application
               </button>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/20 hover:bg-emerald-400 transition mt-4 sm:mt-0"
+              >
+                <Phone size={16} />
+                Enquire on WhatsApp
+              </a>
             </div>
           </div>
         </section>

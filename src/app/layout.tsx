@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Amiri, Nunito_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 const amiri = Amiri({
@@ -46,9 +47,7 @@ export const metadata: Metadata = {
     title: "Dr. Gambo Hamza Islamic Academy | DGHIA Jos",
     description:
       "A distinguished Academy where pupils excel academically, morally and spiritually — Gangare, Jos, Nigeria.",
-    images: [
-      { url: "/og-image.jpg", width: 1200, height: 630, alt: "DGHIA" },
-    ],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DGHIA" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -86,6 +85,7 @@ export default function RootLayout({
     >
       <body className="font-nunito antialiased">
         {children}
+        <WhatsAppButton />
         <Analytics />
       </body>
     </html>

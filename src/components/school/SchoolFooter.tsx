@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { useMemo, useState } from "react";
 import { schoolInfo, schoolNav } from "@/data/school";
+import { sanitizePhoneNumber } from "@/lib/phone";
 
 export default function SchoolFooter() {
   const [email, setEmail] = useState("");
@@ -36,7 +37,7 @@ export default function SchoolFooter() {
   };
 
   // Convert phone number to WhatsApp international format
-  const whatsappUrl = `https://wa.me/${schoolInfo.phone.replace(/^0/, "234")}`;
+  const whatsappUrl = `https://wa.me/${sanitizePhoneNumber(schoolInfo.phone)}`;
 
   const socialLinks = [
     {
@@ -277,7 +278,6 @@ export default function SchoolFooter() {
       <div className="relative border-t border-white/[0.07]">
         <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            
             <p className="text-xs text-white/25">
               © {new Date().getFullYear()} Dr. Gambo Hamza Islamic Academy. All
               rights reserved.

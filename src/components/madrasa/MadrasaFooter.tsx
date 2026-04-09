@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Moon, Clock, GraduationCap } from "lucide-react";
 import { madrasaInfo, madrasaNav } from "@/data/madrasa";
+import { sanitizePhoneNumber } from "@/lib/phone";
 
 export default function MadrasaFooter() {
-  const whatsappUrl = `https://wa.me/${madrasaInfo.phone.replace(/^0/, "234")}`;
+  const whatsappUrl = `https://wa.me/${sanitizePhoneNumber(madrasaInfo.phone)}`;
 
   return (
     <footer className="bg-[var(--madrasa-primary-dark)] text-[var(--madrasa-ivory)] relative overflow-hidden">
@@ -148,7 +149,6 @@ export default function MadrasaFooter() {
             © {new Date().getFullYear()} {madrasaInfo.fullName} · Part of Dr.
             Gambo Hamza Islamic Academy
           </div>
-          
         </div>
       </div>
     </footer>

@@ -3,6 +3,7 @@ import SchoolNavbar from "@/components/school/SchoolNavbar";
 import SchoolFooter from "@/components/school/SchoolFooter";
 import { ArrowRight, Phone } from "lucide-react";
 import { admissionRequirements, entryClasses, schoolInfo } from "@/data/school";
+import { sanitizePhoneNumber } from "@/lib/phone";
 
 export const metadata: Metadata = {
   title: "Admissions",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function AdmissionsPage() {
-  const whatsappUrl = `https://wa.me/${schoolInfo.phone.replace(/^0/, "234")}`;
+  const whatsappUrl = `https://wa.me/${sanitizePhoneNumber(schoolInfo.phone)}`;
 
   return (
     <>

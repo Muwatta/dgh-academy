@@ -2,9 +2,10 @@
 
 import { Phone } from "lucide-react";
 import { schoolInfo } from "@/data/school";
+import { sanitizePhoneNumber } from "@/lib/phone";
 
 export default function WhatsAppButton() {
-  const whatsappUrl = `https://wa.me/${schoolInfo.phone.replace(/^0/, "234")}`;
+  const whatsappUrl = `https://wa.me/${sanitizePhoneNumber(schoolInfo.phone)}`;
 
   return (
     <a

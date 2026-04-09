@@ -284,9 +284,7 @@ export default function SchoolFooter() {
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-white/20">
-            <span>www.dghacademy.com</span>
-            <span className="w-1 h-1 rounded-full bg-[var(--school-accent)]/35 shrink-0" />
-            <span>www.dghacademy.edu.ng</span>
+            <span>www.dghacademy.com.ng</span>
           </div>
         </div>
       </div>

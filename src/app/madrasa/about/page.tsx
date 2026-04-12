@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Moon } from "lucide-react";
 import {
@@ -116,8 +117,14 @@ export default function MadrasaAboutPage() {
             Mudeer
           </h2>
           <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <div className="w-20 h-20 rounded-full border-2 border-[var(--madrasa-accent)] flex items-center justify-center font-amiri text-[var(--madrasa-accent)] text-3xl mx-auto mb-4">
-              م
+            <div className="w-20 h-20 rounded-full border-2 border-[var(--madrasa-accent)] overflow-hidden mx-auto mb-4">
+              <Image
+                src={madrasaMallam.imageUrl ?? "/images/logo_dgh.jpg"}
+                alt={`${madrasaMallam.name} photo`}
+                width={80}
+                height={80}
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="font-bold text-[var(--madrasa-primary)] text-xl mb-1">
               {madrasaMallam.name}
